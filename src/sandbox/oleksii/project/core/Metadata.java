@@ -5,7 +5,7 @@ package sandbox.oleksii.project.core;
  */
 public abstract class Metadata extends TextFile {
 
-    public static final String CLASS_META_EXTENSION = "-meta.xml";
+    public static final String META_XML_EXTENSION = "-meta.xml";
 
     public Metadata(String pathname) {
         super(pathname);

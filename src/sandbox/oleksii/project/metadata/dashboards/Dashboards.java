@@ -15,8 +15,8 @@ public class Dashboards extends Folder {
 
     @Override
     protected void readMetadata() {
-        List<String> filePathes = this.getListOfFolderPathes();
-        for (String fileName : filePathes) {
+        List<String> filePaths = this.getListOfFolderPaths();
+        for (String fileName : filePaths) {
             this.metadata.add(new DashboardsFolder(fileName));
         }
     }

@@ -7,14 +7,14 @@ import sandbox.oleksii.project.core.Metadata;
  */
 public class ClassesMetadata extends Metadata {
 
-    private ClassesMetaMetadata relatedMeta;
+    private ClassesXmlMetadata relatedMeta;
 
     public ClassesMetadata(String fileName) {
         super(fileName);
-        this.relatedMeta = new ClassesMetaMetadata(fileName + CLASS_META_EXTENSION);
+        this.relatedMeta = new ClassesXmlMetadata(fileName + META_XML_EXTENSION);
     }
 
-    public ClassesMetaMetadata getRelatedMeta() {
+    public ClassesXmlMetadata getRelatedMeta() {
         return relatedMeta;
     }
 

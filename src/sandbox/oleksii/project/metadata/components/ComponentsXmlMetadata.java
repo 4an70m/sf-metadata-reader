@@ -1,4 +1,4 @@
-package sandbox.oleksii.project.metadata.triggers;
+package sandbox.oleksii.project.metadata.components;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
@@ -7,9 +7,9 @@ import sandbox.oleksii.project.core.XmlMetadata;
 /**
  * Created by User on 05.01.2018.
  */
-public class TriggersMetaMetadata extends XmlMetadata {
+public class ComponentsXmlMetadata extends XmlMetadata {
 
-    public TriggersMetaMetadata(String pathname) {
+    public ComponentsXmlMetadata(String pathname) {
         super(pathname);
     }
 
@@ -17,7 +17,7 @@ public class TriggersMetaMetadata extends XmlMetadata {
     public void readXml() {
         Serializer serializer = new Persister();
         try {
-            this.entity = serializer.read(TriggersMetaPojo.class, this);
+            this.entity = serializer.read(ComponentsMetaPojo.class, this);
         } catch (Exception e) {
             e.printStackTrace();
         }

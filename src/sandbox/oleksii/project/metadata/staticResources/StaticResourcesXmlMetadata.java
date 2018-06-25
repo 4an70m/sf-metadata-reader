@@ -1,4 +1,4 @@
-package sandbox.oleksii.project.metadata.classes;
+package sandbox.oleksii.project.metadata.staticResources;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
@@ -7,9 +7,9 @@ import sandbox.oleksii.project.core.XmlMetadata;
 /**
  * Created by User on 05.01.2018.
  */
-public class ClassesMetaMetadata extends XmlMetadata {
+public class StaticResourcesXmlMetadata extends XmlMetadata {
 
-    public ClassesMetaMetadata(String pathname) {
+    public StaticResourcesXmlMetadata(String pathname) {
         super(pathname);
     }
 
@@ -17,7 +17,7 @@ public class ClassesMetaMetadata extends XmlMetadata {
     public void readXml() {
         Serializer serializer = new Persister();
         try {
-            this.entity = serializer.read(ClassesMetaPojo.class, this);
+            this.entity = serializer.read(StaticResourcesMetaPojo.class, this);
         } catch (Exception e) {
             e.printStackTrace();
         }

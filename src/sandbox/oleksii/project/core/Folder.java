@@ -14,10 +14,10 @@ public abstract class Folder extends File {
     public Folder(String path) {
         super(path);
         this.metadata = new ArrayList<>();
-        readMetadata();
+        this.readMetadata();
     }
 
-    public List<String> getListOfFilePathes() {
+    public List<String> getListOfFilePaths() {
         List<String> result = new ArrayList<>();
         for (File file : this.listFiles()) {
             if (!file.isDirectory()) {
@@ -27,7 +27,7 @@ public abstract class Folder extends File {
         return result;
     }
 
-    public List<String> getListOfFolderPathes() {
+    public List<String> getListOfFolderPaths() {
         List<String> result = new ArrayList<>();
         for (File file : this.listFiles()) {
             if (file.isDirectory()) {

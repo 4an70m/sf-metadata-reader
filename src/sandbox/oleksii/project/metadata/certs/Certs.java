@@ -17,8 +17,8 @@ public class Certs extends Folder {
 
     @Override
     protected void readMetadata() {
-        List<String> filePathes = this.getListOfFilePathes();
-        for (String fileName : filePathes) {
+        List<String> filePaths = this.getListOfFilePaths();
+        for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
                 this.metadata.add(new CertsMetadata(fileName));

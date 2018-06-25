@@ -1,4 +1,4 @@
-package sandbox.oleksii.project.metadata.certs;
+package sandbox.oleksii.project.metadata.pages;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
@@ -7,9 +7,9 @@ import sandbox.oleksii.project.core.XmlMetadata;
 /**
  * Created by User on 05.01.2018.
  */
-public class CertsMetaMetadata extends XmlMetadata {
+public class PagesXmlMetadata extends XmlMetadata {
 
-    public CertsMetaMetadata(String pathname) {
+    public PagesXmlMetadata(String pathname) {
         super(pathname);
     }
 
@@ -17,7 +17,7 @@ public class CertsMetaMetadata extends XmlMetadata {
     public void readXml() {
         Serializer serializer = new Persister();
         try {
-            this.entity = serializer.read(CertsMetaPojo.class, this);
+            this.entity = serializer.read(PagesMetaPojo.class, this);
         } catch (Exception e) {
             e.printStackTrace();
         }

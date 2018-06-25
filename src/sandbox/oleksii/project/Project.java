@@ -83,8 +83,8 @@ public class Project {
     }
 
     private void readFolders(String rootPath) {
-        this.pages = new Pages(rootPath);
-//        this.classes = new Classes(rootPath);
+//        this.pages = new Pages(rootPath);
+        this.classes = new Classes(rootPath);
 //        this.triggers = new Triggers(rootPath);
 //        this.objects = new Objects(rootPath);
 //        this.components = new Components(rootPath);
@@ -113,15 +113,22 @@ public class Project {
 //        this.cleanDataServices = new CleanDataServices(rootPath);
 //        this.dataCategoryGroups = new DataCategoryGroups(rootPath);
 //        this.delegateGroups = new DelegateGroups(rootPath);
-        this.dashboards = new Dashboards(rootPath);
+//        this.dashboards = new Dashboards(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
-        Project p = new Project("");
+        Project p = new Project("C:\\Users\\4an70m\\Documents\\sublime\\hwks-aorta-dev3\\src");
 //        XmlPojoEntity metaPojo = p.delegateGroups.getMetadata().get(0).getEntity();
 //        p.delegateGroups.getMetadata().get(0).writeToFile();
 //        System.out.println(pojo);
+        p.classes.getMetadata()
+                .stream()
+                .forEach(classesMetadata -> {
+                    if (classesMetadata.getRelatedMeta().getEntity().getApiVersion().contains("39.0")) {
+                        System.out.println(classesMetadata.getName());
+                    }
+                });
     }
 //ToDo:
 //dashboards

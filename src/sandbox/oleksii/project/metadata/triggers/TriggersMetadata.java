@@ -7,14 +7,14 @@ import sandbox.oleksii.project.core.Metadata;
  */
 public class TriggersMetadata extends Metadata {
 
-    private TriggersMetaMetadata relatedMeta;
+    private TriggersXmlMetadata relatedMeta;
 
     public TriggersMetadata(String fileName) {
         super(fileName);
-        this.relatedMeta = new TriggersMetaMetadata(fileName + CLASS_META_EXTENSION);
+        this.relatedMeta = new TriggersXmlMetadata(fileName + META_XML_EXTENSION);
     }
 
-    public TriggersMetaMetadata getRelatedMeta() {
+    public TriggersXmlMetadata getRelatedMeta() {
         return relatedMeta;
     }
 
