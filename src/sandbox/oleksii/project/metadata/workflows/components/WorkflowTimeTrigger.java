@@ -10,10 +10,10 @@ import java.util.List;
  */
 public class WorkflowTimeTrigger {
 
-    @ElementList(inline = true, entry = "actions")
+    @ElementList(inline = true, entry = "actions", required = false)
     private List<Action> actions;
 
-    @Element
+    @Element(required = false)
     private String offsetFromField;
 
     @Element

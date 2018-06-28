@@ -75,6 +75,9 @@ public class Fields {
     private Boolean required;
 
     @Element(required = false)
+    private Boolean restrictedAdminField;
+
+    @Element(required = false)
     private String trackFeedHistory;
 
     @Element(required = false)

@@ -25,6 +25,9 @@ public class Alert {
     @ElementList(inline = true, entry = "recipients", required = false)
     private List<Recipient> recipients;
 
+    @Element(required = false)
+    private String senderAddress;
+
     @Element
     private String senderType;
 

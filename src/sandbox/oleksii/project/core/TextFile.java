@@ -13,7 +13,9 @@ public class TextFile extends File {
 
     public TextFile(String pathname) {
         super(pathname);
-        this.plainText = this.readFileToPlainText();
+        if (this.isFile()) {
+            this.plainText = this.readFileToPlainText();
+        }
     }
 
     public void writeToFile() throws Exception {

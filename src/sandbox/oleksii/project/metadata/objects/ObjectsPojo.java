@@ -25,6 +25,9 @@ public class ObjectsPojo extends XmlPojoEntity {
     @Element(required = false)
     private Boolean enableActivities;
 
+    @ElementList(required = false, inline = true)
+    private List<CompactLayouts> compactLayouts;
+
     @Element(required = false)
     private String deploymentStatus;
 
@@ -102,6 +105,9 @@ public class ObjectsPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private String sharingModel;
+
+    @Element(required = false)
+    private SharingReasons sharingReasons;
 
     @Element(required = false)
     private String startsWith;

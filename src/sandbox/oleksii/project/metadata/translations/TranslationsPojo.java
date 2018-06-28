@@ -1,9 +1,11 @@
 package sandbox.oleksii.project.metadata.translations;
 
+import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import sandbox.oleksii.project.core.XmlPojoEntity;
+import sandbox.oleksii.project.metadata.translations.components.FlowDefinitions;
 import sandbox.oleksii.project.metadata.translations.components.LabelTranslation;
 
 import java.util.ArrayList;
@@ -16,6 +18,9 @@ import java.util.List;
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
 public class TranslationsPojo extends XmlPojoEntity {
 
+    @ElementList(inline = true, entry = "customApplications")
+    private List<LabelTranslation> customApplications;
+
     @ElementList(inline = true, entry = "customLabels")
     private List<LabelTranslation> customLabels;
 
@@ -24,6 +29,9 @@ public class TranslationsPojo extends XmlPojoEntity {
 
     @ElementList(inline = true, entry = "customTabs")
     private List<LabelTranslation> customTabs;
+
+    @ElementList(inline = true, entry = "flowDefinitions")
+    private List<FlowDefinitions> flowDefinitions;
 
     @ElementList(inline = true, entry = "quickActions")
     private List<LabelTranslation> quickActions;

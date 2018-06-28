@@ -1,7 +1,9 @@
 package sandbox.oleksii.project.core;
 
 import java.io.File;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -19,7 +21,7 @@ public abstract class Folder extends File {
 
     public List<String> getListOfFilePaths() {
         List<String> result = new ArrayList<>();
-        for (File file : this.listFiles()) {
+        for (File file : this.getListFiles()) {
             if (!file.isDirectory()) {
                 result.add(file.getAbsolutePath());
             }
@@ -29,12 +31,20 @@ public abstract class Folder extends File {
 
     public List<String> getListOfFolderPaths() {
         List<String> result = new ArrayList<>();
-        for (File file : this.listFiles()) {
+        for (File file : this.getListFiles()) {
             if (file.isDirectory()) {
                 result.add(file.getAbsolutePath());
             }
         }
         return result;
+    }
+
+    public List<File> getListFiles() {
+        File[] files = super.listFiles();
+        if (files != null) {
+            return Arrays.asList(files);
+        }
+        return new ArrayList<>();
     }
 
     protected abstract void readMetadata();

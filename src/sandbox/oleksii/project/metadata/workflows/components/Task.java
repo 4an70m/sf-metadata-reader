@@ -10,10 +10,13 @@ public class Task {
     @Element
     private String fullName;
 
+    @Element(required = false)
+    private String assignedTo;
+
     @Element
     private String assignedToType;
 
-    @Element
+    @Element(required = false)
     private String description;
 
     @Element
@@ -21,6 +24,9 @@ public class Task {
 
     @Element
     private Boolean notifyAssignee;
+
+    @Element(required = false)
+    private String offsetFromField;
 
     @Element
     private String priority;

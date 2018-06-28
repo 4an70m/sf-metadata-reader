@@ -25,6 +25,7 @@ import sandbox.oleksii.project.metadata.objects.ObjectsMetadata;
 import sandbox.oleksii.project.metadata.objects.ObjectsPojo;
 import sandbox.oleksii.project.metadata.objects.components.Fields;
 import sandbox.oleksii.project.metadata.pages.Pages;
+import sandbox.oleksii.project.metadata.permissionSets.PermissionSets;
 import sandbox.oleksii.project.metadata.sharingRules.SharingRules;
 import sandbox.oleksii.project.metadata.sites.Sites;
 import sandbox.oleksii.project.metadata.standardValueSetTranslations.StandardValueSetTranslations;
@@ -37,6 +38,7 @@ import sandbox.oleksii.project.metadata.weblinks.Weblinks;
 import sandbox.oleksii.project.metadata.workflows.Workflows;
 
 import java.io.File;
+import java.security.Permission;
 
 /**
  * Created by User on 04.01.2018.
@@ -76,6 +78,7 @@ public class Project {
     public DataCategoryGroups dataCategoryGroups;
     public DelegateGroups delegateGroups;
     public Dashboards dashboards;
+    public PermissionSets permissionSets;
 
     public Project(String rootPath) {
         this.root = new File(rootPath);
@@ -84,7 +87,7 @@ public class Project {
 
     private void readFolders(String rootPath) {
 //        this.pages = new Pages(rootPath);
-        this.classes = new Classes(rootPath);
+//        this.classes = new Classes(rootPath);
 //        this.triggers = new Triggers(rootPath);
 //        this.objects = new Objects(rootPath);
 //        this.components = new Components(rootPath);
@@ -114,27 +117,34 @@ public class Project {
 //        this.dataCategoryGroups = new DataCategoryGroups(rootPath);
 //        this.delegateGroups = new DelegateGroups(rootPath);
 //        this.dashboards = new Dashboards(rootPath);
+//        this.permissionSets = new PermissionSets(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
-        Project p = new Project("C:\\Users\\4an70m\\Documents\\sublime\\hwks-aorta-dev3\\src");
+        Project p = new Project("avis-prod-src");
+        Project p2 = new Project("C:\\Users\\4an70m\\Documents\\sublime\\hwks-aorta-dev3\\src");
 //        XmlPojoEntity metaPojo = p.delegateGroups.getMetadata().get(0).getEntity();
 //        p.delegateGroups.getMetadata().get(0).writeToFile();
 //        System.out.println(pojo);
-        p.classes.getMetadata()
-                .stream()
-                .forEach(classesMetadata -> {
-                    if (classesMetadata.getRelatedMeta().getEntity().getApiVersion().contains("39.0")) {
-                        System.out.println(classesMetadata.getName());
-                    }
-                });
+//        p.classes.getMetadata()
+//                .stream()
+//                .forEach(classesMetadata -> {
+//                    if (classesMetadata.getRelatedMeta().getEntity().getApiVersion().contains("39.0")) {
+//                        System.out.println(classesMetadata.getName());
+//                    }
+//                });
     }
-//ToDo:
+
+//ToDo-ing:
 //dashboards
+//settings
+
+
+//ToDo:
+//email
 //documents
 //duplicateRules
-//email
 //escalationRules
 //flexipages
 //flowDefinitions
@@ -146,7 +156,6 @@ public class Project {
 //letterhead
 //newreps
 //objectTranslations
-//permissionsets
 //portals
 //profilePasswordPolicies
 //profiles
@@ -158,5 +167,4 @@ public class Project {
 //reportTypes
 //roles
 //scontrols
-//settings
 }

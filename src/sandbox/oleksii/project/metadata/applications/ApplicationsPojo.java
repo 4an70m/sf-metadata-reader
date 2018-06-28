@@ -5,10 +5,7 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import sandbox.oleksii.project.core.XmlPojoEntity;
-import sandbox.oleksii.project.metadata.applications.components.CustomApplicationComponents;
-import sandbox.oleksii.project.metadata.applications.components.KeyboardShortcuts;
-import sandbox.oleksii.project.metadata.applications.components.ListPlacement;
-import sandbox.oleksii.project.metadata.applications.components.WorkspaceMappings;
+import sandbox.oleksii.project.metadata.applications.components.*;
 
 import java.util.List;
 
@@ -39,6 +36,9 @@ public class ApplicationsPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private String listRefreshMethod;
+
+    @ElementList(entry = "pushNotification", required = false)
+    private List<PushNotification> pushNotifications;
 
     @Element(required = false)
     private String saveUserSessions;

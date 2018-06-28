@@ -13,10 +13,13 @@ public class LookupFilter {
     @Element
     private Boolean active;
 
+    @Element(required = false)
+    private String errorMessage;
+
     @ElementList(inline = true, entry = "filterItems")
     private List<FilterItem> filterItems;
 
-    @Element
+    @Element(required = false)
     private String infoMessage;
 
     @Element

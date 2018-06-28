@@ -13,7 +13,10 @@ public class FilterItem {
     @Element
     private String operation;
 
-    @Element
+    @Element(required = false)
     private String value;
+
+    @Element(required = false)
+    private String valueField;
 
 }

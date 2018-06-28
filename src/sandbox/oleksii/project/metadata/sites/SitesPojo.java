@@ -40,7 +40,19 @@ public class SitesPojo extends XmlPojoEntity {
     private String bandwidthExceededPage;
 
     @Element
+    private Boolean browserXssProtection;
+
+    @Element
     private String clickjackProtectionLevel;
+
+    @Element
+    private Boolean contentSniffingProtection;
+
+    @Element
+    private Boolean cspUpgradeInsecureRequests;
+
+    @Element(required = false)
+    private String description;
 
     @Element
     private String fileNotFoundPage;
@@ -59,6 +71,9 @@ public class SitesPojo extends XmlPojoEntity {
 
     @Element
     private String masterLabel;
+
+    @Element
+    private Boolean referrerPolicyOriginWhenCrossOrigin;
 
     @Element
     private Boolean requireHttps;

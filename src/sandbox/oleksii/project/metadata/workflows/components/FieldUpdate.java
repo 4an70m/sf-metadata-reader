@@ -10,6 +10,9 @@ public class FieldUpdate {
     @Element
     private String fullName;
 
+    @Element(required = false)
+    private String description;
+
     @Element
     private String field;
 
@@ -36,6 +39,9 @@ public class FieldUpdate {
 
     @Element(name = "protected")
     private Boolean isProtected;
+
+    @Element(required = false)
+    private Boolean targetObject;
 
     @Element(required = false)
     private Boolean reevaluateOnChange;

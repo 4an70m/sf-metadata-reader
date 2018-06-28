@@ -10,4 +10,9 @@ public class ListPlacement {
     @Element
     private String location;
 
+    @Element(required = false)
+    private String units;
+
+    @Element(required = false)
+    private String width;
 }

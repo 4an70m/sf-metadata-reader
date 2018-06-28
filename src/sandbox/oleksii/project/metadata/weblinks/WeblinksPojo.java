@@ -15,10 +15,13 @@ public class WeblinksPojo extends XmlPojoEntity {
     @Element
     private String availability;
 
+    @Element(required = false)
+    private String description;
+
     @Element
     private String displayType;
 
-    @Element
+    @Element(required = false)
     private String encodingKey;
 
     @Element(required = false)
@@ -30,7 +33,7 @@ public class WeblinksPojo extends XmlPojoEntity {
     @Element(required = false)
     private Boolean hasToolbar;
 
-    @Element
+    @Element(required = false)
     private Integer height;
 
     @Element(required = false)
@@ -52,12 +55,15 @@ public class WeblinksPojo extends XmlPojoEntity {
     private Boolean isProtected;
 
     @Element(required = false)
+    private String scontrol;
+
+    @Element(required = false)
     private Boolean showsLocation;
 
     @Element(required = false)
     private Boolean showsStatus;
 
-    @Element
+    @Element(required = false)
     private String url;
 
 }

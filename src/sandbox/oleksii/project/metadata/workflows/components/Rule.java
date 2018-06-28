@@ -20,6 +20,9 @@ public class Rule {
     @Element
     private Boolean active;
 
+    @Element(required = false)
+    public String booleanFilter;
+
     @ElementList(inline = true, entry = "criteriaItems", required = false)
     private List<CriteriaItems> criteriaItems;
 
