@@ -7,7 +7,7 @@ public class Metadata extends TextFile {
 
     public static final String META_XML_EXTENSION = "-meta.xml";
 
-    public Metadata(String pathname) {
-        super(pathname);
+    public Metadata(String fileName) {
+        super(fileName);
     }
 }

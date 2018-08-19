@@ -11,8 +11,8 @@ public class TextFile extends File {
 
     protected String plainText;
 
-    public TextFile(String pathname) {
-        super(pathname);
+    public TextFile(String fileName) {
+        super(fileName);
         if (this.isFile()) {
             this.plainText = this.readFileToPlainText();
         }

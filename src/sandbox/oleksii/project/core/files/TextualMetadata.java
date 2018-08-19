@@ -5,7 +5,7 @@ package sandbox.oleksii.project.core.files;
  */
 public class TextualMetadata extends Metadata {
 
-    public TextualMetadata(String pathname) {
-        super(pathname);
+    public TextualMetadata(String fileName) {
+        super(fileName);
     }
 }

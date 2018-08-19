@@ -7,8 +7,8 @@ public abstract class XmlMetadata extends Metadata {
 
     protected XmlPojoEntity entity;
 
-    public XmlMetadata(String pathname) {
-        super(pathname);
+    public XmlMetadata(String fileName) {
+        super(fileName);
         this.readXml();
     }
 

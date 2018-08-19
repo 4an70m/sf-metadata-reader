@@ -18,7 +18,8 @@ public class DuplicateRules extends MetadataFolder {
     protected void readMetadata() {
         List<String> filePaths = this.getListOfFilePaths();
         for (String fileName : filePaths) {
-            if (CLASS_EXTENSION.equals(this.getExtension(fileName))) {
+            String extension = this.getExtension(fileName);
+            if (CLASS_EXTENSION.equals(extension)) {
                 this.metadata.add(new DuplicateRuleMetadata(fileName));
             }
         }

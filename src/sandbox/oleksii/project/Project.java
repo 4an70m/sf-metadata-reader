@@ -23,6 +23,8 @@ import sandbox.oleksii.project.metadata.matchingRules.MatchingRules;
 import sandbox.oleksii.project.metadata.objects.Objects;
 import sandbox.oleksii.project.metadata.pages.Pages;
 import sandbox.oleksii.project.metadata.permissionSets.PermissionSets;
+import sandbox.oleksii.project.metadata.roles.RoleMetadata;
+import sandbox.oleksii.project.metadata.roles.Roles;
 import sandbox.oleksii.project.metadata.scontrols.SControlMetadata;
 import sandbox.oleksii.project.metadata.scontrols.SControls;
 import sandbox.oleksii.project.metadata.sharingRules.SharingRules;
@@ -79,6 +81,7 @@ public class Project {
     public PermissionSets permissionSets;
     public DuplicateRules duplicateRules;
     public SControls sControls;
+    public Roles roles;
 
     public Project(String rootPath) {
         this.root = new File(rootPath);
@@ -120,13 +123,14 @@ public class Project {
 //        this.permissionSets = new PermissionSets(rootPath);
 //        this.duplicateRules = new DuplicateRules(rootPath);
 //        this.sControls = new SControls(rootPath);
+        this.roles = new Roles(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
 //        Project p2 = new Project("");
         Project p = new Project("");
-        System.out.println(((SControlMetadata)p.sControls.getMetadata().get(0)).getRelatedMeta().getEntity());
+        System.out.println(p.roles.getMetadata().get(0).getEntity().toString());
 //        FolderWithMeta f = (FolderWithMeta) p.dashboards.getFolders().get(0);
 //        XmlMetadata m = (XmlMetadata) f.getMetadata().get(0);
 //        System.out.println(m.getEntity());
