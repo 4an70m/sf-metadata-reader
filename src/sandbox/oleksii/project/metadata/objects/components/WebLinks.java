@@ -10,8 +10,8 @@ public class WebLinks {
     @Element
     private String fullName;
 
-    @Element
-    private Boolean availability;
+    @Element(name = "availability")
+    private Boolean isAvailable;
 
     @Element(required = false)
     private String description;

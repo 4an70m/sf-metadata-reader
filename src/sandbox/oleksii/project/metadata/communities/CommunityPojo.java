@@ -16,8 +16,8 @@ import java.util.List;
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
 public class CommunityPojo extends XmlPojoEntity {
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
     @Element
     private Boolean enableChatterAnswers;

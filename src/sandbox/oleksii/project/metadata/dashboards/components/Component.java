@@ -36,11 +36,11 @@ public class Component {
     @Element(required = false)
     private String drillDownUrl;
 
-    @Element(required = false)
-    private Boolean drillEnabled;
+    @Element(required = false, name = "drillEnabled")
+    private Boolean isDrillEnabled;
 
-    @Element(required = false)
-    private Boolean drillToDetailEnabled;
+    @Element(required = false, name = "drillToDetailEnabled")
+    private Boolean isDrillToDetailEnabled;
 
     @Element(required = false)
     private Boolean enableHover;

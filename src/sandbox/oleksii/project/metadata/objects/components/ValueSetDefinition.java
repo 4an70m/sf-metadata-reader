@@ -10,8 +10,8 @@ import java.util.List;
  */
 public class ValueSetDefinition {
 
-    @Element
-    private Boolean sorted;
+    @Element(name = "sorted")
+    private Boolean isSorted;
 
     @ElementList(inline = true)
     private List<Value> value;

@@ -10,8 +10,8 @@ public class ValidationRules {
     @Element
     private String fullName;
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
     @Element
     private String errorConditionFormula;

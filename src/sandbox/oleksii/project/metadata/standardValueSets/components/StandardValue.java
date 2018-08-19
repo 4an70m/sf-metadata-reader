@@ -19,14 +19,14 @@ public class StandardValue {
     @Element(required = false)
     private String description;
 
-    @Element(required = false)
-    private Boolean cssExposed;
+    @Element(required = false, name = "cssExposed")
+    private Boolean isCssExposed;
 
-    @Element(required = false)
-    private Boolean closed;
+    @Element(required = false, name = "closed")
+    private Boolean isClosed;
 
-    @Element(required = false)
-    private Boolean converted;
+    @Element(required = false, name = "converted")
+    private Boolean isConverted;
 
     @Element(required = false)
     private String forecastCategory;
@@ -34,14 +34,14 @@ public class StandardValue {
     @Element(required = false)
     private Integer probability;
 
-    @Element(required = false)
-    private Boolean won;
+    @Element(required = false, name = "won")
+    private Boolean isWon;
 
-    @Element(required = false)
-    private Boolean highPriority;
+    @Element(required = false, name = "highPriority")
+    private Boolean isHighPriority;
 
-    @Element(required = false)
-    private Boolean reviewed;
+    @Element(required = false, name = "reviewed")
+    private Boolean isReviewed;
 
     @Element(required = false)
     private String reverseRole;
@@ -53,14 +53,14 @@ public class StandardValue {
                 ", isDefault=" + isDefault +
                 ", label='" + label + '\'' +
                 ", description='" + description + '\'' +
-                ", cssExposed=" + cssExposed +
-                ", closed=" + closed +
-                ", converted=" + converted +
+                ", cssExposed=" + isCssExposed +
+                ", closed=" + isClosed +
+                ", converted=" + isConverted +
                 ", forecastCategory='" + forecastCategory + '\'' +
                 ", probability=" + probability +
-                ", won=" + won +
-                ", highPriority=" + highPriority +
-                ", reviewed=" + reviewed +
+                ", won=" + isWon +
+                ", highPriority=" + isHighPriority +
+                ", reviewed=" + isReviewed +
                 ", reverseRole='" + reverseRole + '\'' +
                 '}';
     }

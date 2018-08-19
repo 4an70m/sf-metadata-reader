@@ -10,8 +10,8 @@ public class DefaultShortcut {
     @Element
     private String action;
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
     @Element
     private String keyCommand;

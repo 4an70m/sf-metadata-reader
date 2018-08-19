@@ -7,13 +7,13 @@ import org.simpleframework.xml.Element;
  */
 public class FieldPermissions {
 
-    @Element
-    private Boolean editable;
+    @Element(name = "editable")
+    private Boolean isEditable;
 
     @Element
     private String field;
 
-    @Element
-    private Boolean readable;
+    @Element(name = "readable")
+    private Boolean isReadable;
 
 }

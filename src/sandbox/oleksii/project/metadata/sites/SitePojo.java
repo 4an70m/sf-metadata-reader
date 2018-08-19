@@ -12,8 +12,8 @@ import sandbox.oleksii.project.core.files.XmlPojoEntity;
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
 public class SitePojo extends XmlPojoEntity {
 
-    @Element
-    private Boolean active;
+    @Element(name = "acitve")
+    private Boolean isActive;
 
     @Element
     private Boolean allowHomePage;

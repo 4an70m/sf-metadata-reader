@@ -40,8 +40,8 @@ public class FieldUpdate {
     @Element(name = "protected")
     private Boolean isProtected;
 
-    @Element(required = false)
-    private Boolean targetObject;
+    @Element(required = false, name = "targetObject")
+    private Boolean isTargetObject;
 
     @Element(required = false)
     private Boolean reevaluateOnChange;

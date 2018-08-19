@@ -13,8 +13,8 @@ public class AssignmentRule {
     @Element
     private String fullName;
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
 
     @ElementList(inline = true, entry = "ruleEntry", required = false)
@@ -24,7 +24,7 @@ public class AssignmentRule {
     public String toString() {
         return "AssignmentRule{" +
                 "fullName='" + fullName + '\'' +
-                ", active=" + active +
+                ", active=" + isActive +
                 ", ruleEntries=" + ruleEntries +
                 '}';
     }

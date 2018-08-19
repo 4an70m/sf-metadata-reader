@@ -16,8 +16,8 @@ import java.util.List;
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
 public class StandardValueSetPojo extends XmlPojoEntity {
 
-    @Element(required = false)
-    private Boolean sorted;
+    @Element(required = false, name = "sorted")
+    private Boolean isSorted;
 
     @ElementList(inline = true, required = false, entry = "standardValue")
     private List<StandardValue> standardValue;
@@ -25,7 +25,7 @@ public class StandardValueSetPojo extends XmlPojoEntity {
     @Override
     public String toString() {
         return "StandardValueSetsPojo{" +
-                "sorted=" + sorted +
+                "sorted=" + isSorted +
                 ", standardValue=" + standardValue +
                 '}';
     }

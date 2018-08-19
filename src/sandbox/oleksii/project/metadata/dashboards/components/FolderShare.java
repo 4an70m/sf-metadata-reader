@@ -8,13 +8,13 @@ import org.simpleframework.xml.Element;
 public class FolderShare {
 
     @Element
-    public String accessLevel;
+    private String accessLevel;
 
     @Element
-    public String sharedTo;
+    private String sharedTo;
 
     @Element
-    public String sharedToType;
+    private String sharedToType;
 
     @Override
     public String toString() {

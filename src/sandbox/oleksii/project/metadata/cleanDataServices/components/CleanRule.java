@@ -11,8 +11,8 @@ import java.util.List;
  */
 public class CleanRule {
 
-    @Element
-    private Boolean bulkEnabled;
+    @Element(name = "bulkEnabled")
+    private Boolean isBulkEnabled;
 
     @Element
     private Boolean bypassTriggers;
@@ -43,5 +43,4 @@ public class CleanRule {
 
     @Element
     private String targetSobjectType;
-
 }

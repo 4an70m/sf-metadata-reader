@@ -22,8 +22,8 @@ public class CertXmlMetaPojo extends XmlPojoEntity {
     @Element
     private Boolean caSigned;
 
-    @Element
-    private Boolean encryptedWithPlatformEncryption;
+    @Element(name = "encryptedWithPlatformEncryption")
+    private Boolean isEncryptedWithPlatformEncryption;
 
     private Date expirationDate;
 
@@ -33,8 +33,8 @@ public class CertXmlMetaPojo extends XmlPojoEntity {
     @Element
     private String masterLabel;
 
-    @Element
-    private Boolean privateKeyExportable;
+    @Element(name = "privateKeyExportable")
+    private Boolean isPrivateKeyExportable;
 
     public CertXmlMetaPojo() {
     }
@@ -61,11 +61,11 @@ public class CertXmlMetaPojo extends XmlPojoEntity {
     public String toString() {
         return "CertsMetaPojo{" +
                 "caSigned=" + caSigned +
-                ", encryptedWithPlatformEncryption=" + encryptedWithPlatformEncryption +
+                ", encryptedWithPlatformEncryption=" + isEncryptedWithPlatformEncryption +
                 ", expirationDate=" + expirationDate +
                 ", keySize=" + keySize +
                 ", masterLabel='" + masterLabel + '\'' +
-                ", privateKeyExportable=" + privateKeyExportable +
+                ", privateKeyExportable=" + isPrivateKeyExportable +
                 '}';
     }
 }

@@ -10,14 +10,14 @@ public class AutoResponseRule {
     @Element
     private String fullName ;
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
     @Override
     public String toString() {
         return "AutoResponseRule{" +
                 "fullName='" + fullName + '\'' +
-                ", active=" + active +
+                ", active=" + isActive +
                 '}';
     }
 }

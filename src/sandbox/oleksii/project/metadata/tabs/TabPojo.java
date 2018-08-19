@@ -18,14 +18,14 @@ public class TabPojo extends XmlPojoEntity {
     @Element(required = false)
     private String icon;
 
-    @Element(required = false)
-    private Boolean customObject;
+    @Element(required = false, name = "customObject")
+    private Boolean isCustomObject;
 
     @Element(required = false)
     private String description;
 
-    @Element
-    private Boolean mobileReady;
+    @Element(name = "mobileReady")
+    private Boolean isMobileReady;
 
     @Element(required = false)
     private String page;
@@ -53,9 +53,9 @@ public class TabPojo extends XmlPojoEntity {
         return "TabsPojo{" +
                 "label='" + label + '\'' +
                 ", icon='" + icon + '\'' +
-                ", customObject=" + customObject +
+                ", customObject=" + isCustomObject +
                 ", description='" + description + '\'' +
-                ", mobileReady=" + mobileReady +
+                ", mobileReady=" + isMobileReady +
                 ", page='" + page + '\'' +
                 ", motif='" + motif + '\'' +
                 ", frameHeight='" + frameHeight + '\'' +

@@ -9,15 +9,19 @@ import java.util.List;
  */
 public class PermissionSets extends MetadataFolder {
 
+    public static final String CLASS_EXTENSION = ".permissionset";
+
     public PermissionSets(String rootPath) {
         super(rootPath + "/permissionsets");
     }
 
     @Override
     protected void readMetadata() {
-        List<String> filePaths = this.getListOfFolderPaths();
+        List<String> filePaths = this.getListOfFilePaths();
         for (String fileName : filePaths) {
-            this.metadata.add(new PermissionSetMetadata(fileName));
+            if (CLASS_EXTENSION.equals(this.getExtension(fileName))) {
+                this.metadata.add(new PermissionSetMetadata(fileName));
+            }
         }
     }
 

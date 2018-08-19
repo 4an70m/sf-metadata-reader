@@ -16,8 +16,8 @@ import java.util.ArrayList;
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
 public class DataCategoryGroupPojo extends XmlPojoEntity {
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
     @Element
     private DataCategory dataCategory;
@@ -34,7 +34,7 @@ public class DataCategoryGroupPojo extends XmlPojoEntity {
     @Override
     public String toString() {
         return "DataCategoryGroupsPojo{" +
-                "active=" + active +
+                "active=" + isActive +
                 ", dataCategory=" + dataCategory +
                 ", description='" + description + '\'' +
                 ", label='" + label + '\'' +

@@ -31,55 +31,6 @@ public class PageXmlMetaPojo extends XmlPojoEntity {
     @Element(required = false)
     private PackageVersions packageVersions;
 
-
-    public String getApiVersion() {
-        return apiVersion;
-    }
-
-    public void setApiVersion(String apiVersion) {
-        this.apiVersion = apiVersion;
-    }
-
-    public PackageVersions getPackageVersions() {
-        return packageVersions;
-    }
-
-    public void setPackageVersions(PackageVersions packageVersions) {
-        this.packageVersions = packageVersions;
-    }
-
-    public String getLabel() {
-        return label;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
-    public Boolean getAvailableInTouch() {
-        return availableInTouch;
-    }
-
-    public void setAvailableInTouch(Boolean availableInTouch) {
-        this.availableInTouch = availableInTouch;
-    }
-
-    public Boolean getConfirmationTokenRequired() {
-        return confirmationTokenRequired;
-    }
-
-    public void setConfirmationTokenRequired(Boolean confirmationTokenRequired) {
-        this.confirmationTokenRequired = confirmationTokenRequired;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     @Override
     public String toString() {
         return "TriggersMetaPojo{" +

@@ -1,7 +1,5 @@
 package sandbox.oleksii.project;
 
-import sandbox.oleksii.project.core.files.XmlMetadata;
-import sandbox.oleksii.project.core.folders.FolderWithMeta;
 import sandbox.oleksii.project.metadata.appMenus.AppMenus;
 import sandbox.oleksii.project.metadata.applications.Applications;
 import sandbox.oleksii.project.metadata.approvalProcesses.ApprovalProcesses;
@@ -113,17 +111,18 @@ public class Project {
 //        this.cleanDataServices = new CleanDataServices(rootPath);
 //        this.dataCategoryGroups = new DataCategoryGroups(rootPath);
 //        this.delegateGroups = new DelegateGroups(rootPath);
-        this.dashboards = new Dashboards(rootPath);
-//        this.permissionSets = new PermissionSets(rootPath);
+//        this.dashboards = new Dashboards(rootPath);
+        this.permissionSets = new PermissionSets(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
 //        Project p2 = new Project("C:\\Users\\4an70m\\Documents\\sublime\\hwks-aorta-dev3\\src");
         Project p = new Project("avis-prod-src");
-        FolderWithMeta f = (FolderWithMeta) p.dashboards.getFolders().get(0);
-        XmlMetadata m = (XmlMetadata) f.getMetadata().get(0);
-        System.out.println(m.getEntity());
+        System.out.println(p.permissionSets.getMetadata().get(0).getEntity());
+//        FolderWithMeta f = (FolderWithMeta) p.dashboards.getFolders().get(0);
+//        XmlMetadata m = (XmlMetadata) f.getMetadata().get(0);
+//        System.out.println(m.getEntity());
 //        System.out.println(p2.permissionSets.getMetadata().isEmpty());
 //        XmlPojoEntity metaPojo = p.delegateGroups.getMetadata().get(0).getEntity();
 //        p.delegateGroups.getMetadata().get(0).writeToFile();

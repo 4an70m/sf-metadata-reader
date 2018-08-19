@@ -3,14 +3,13 @@ package sandbox.oleksii.project.metadata.permissionSets.componetns;
 import org.simpleframework.xml.Element;
 
 /**
- * Created by 4an70m on 28.06.2018.
+ * Created by 4an70m on 19.08.2018.
  */
-public class RecordTypeVisibilities {
+public class TabSettings {
 
     @Element
-    private String recordType;
+    private String tab;
 
     @Element
-    private Boolean visible;
-
+    private String visibility;
 }

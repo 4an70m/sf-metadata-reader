@@ -5,8 +5,7 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import sandbox.oleksii.project.core.files.XmlPojoEntity;
-import sandbox.oleksii.project.metadata.permissionSets.componetns.FieldPermissions;
-import sandbox.oleksii.project.metadata.permissionSets.componetns.RecordTypeVisibilities;
+import sandbox.oleksii.project.metadata.permissionSets.componetns.*;
 
 import java.util.List;
 
@@ -17,6 +16,12 @@ import java.util.List;
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
 public class PermissionSetPojo extends XmlPojoEntity {
 
+    @ElementList(inline = true, entry = "applicationVisibilities", required = false)
+    private List<ApplicationVisibility> applicationVisibilities;
+
+    @ElementList(inline = true, entry = "classAccesses", required = false)
+    private List<ClassAccess> classAccesses;
+
     @ElementList(inline = true, entry = "fieldPermissions")
     private List<FieldPermissions> fieldPermissions;
 
@@ -26,9 +31,24 @@ public class PermissionSetPojo extends XmlPojoEntity {
     @Element
     private String label;
 
-    @Element
+    @Element(required = false)
+    private String description;
+
+    @Element(required = false)
     private String license;
 
-    @Element
-    private RecordTypeVisibilities recordTypeVisibilities;
+    @ElementList(inline = true, required = false, entry = "userPermissions")
+    private List<UserPermission> userPermissions;
+
+    @ElementList(inline = true, required = false, entry = "recordTypeVisibilities")
+    private List<RecordTypeVisibility> recordTypeVisibilities;
+
+    @ElementList(inline = true, required = false, entry = "tabSettings")
+    private List<TabSettings> tabSettings;
+
+    @ElementList(inline = true, required = false, entry = "pageAccesses")
+    private List<PageAccess> pageAccesses;
+
+    @ElementList(inline = true, required = false, entry = "objectPermissions")
+    private List<ObjectPermissions> objectPermissions;
 }

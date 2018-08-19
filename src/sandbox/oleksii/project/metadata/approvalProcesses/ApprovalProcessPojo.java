@@ -17,8 +17,8 @@ import java.util.List;
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
 public class ApprovalProcessPojo extends XmlPojoEntity {
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
     @Element
     private Boolean allowRecall;
@@ -77,7 +77,7 @@ public class ApprovalProcessPojo extends XmlPojoEntity {
     @Override
     public String toString() {
         return "ApprovalProcessPojo{" +
-                "active=" + active +
+                "active=" + isActive +
                 ", allowRecall=" + allowRecall +
                 ", allowedSubmitters=" + allowedSubmitters +
                 ", approvalPageFields=" + approvalPageFields +

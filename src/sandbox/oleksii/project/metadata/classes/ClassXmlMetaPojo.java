@@ -22,22 +22,6 @@ public class ClassXmlMetaPojo extends XmlPojoEntity {
     @Element(required = false)
     private PackageVersions packageVersions;
 
-    public String getApiVersion() {
-        return apiVersion;
-    }
-
-    public void setApiVersion(String apiVersion) {
-        this.apiVersion = apiVersion;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     @Override
     public String toString() {
         return "TriggersMetaPojo{" +

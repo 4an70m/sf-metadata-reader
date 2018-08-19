@@ -10,8 +10,8 @@ import java.util.List;
  */
 public class LookupFilter {
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
     @Element(required = false)
     private String errorMessage;

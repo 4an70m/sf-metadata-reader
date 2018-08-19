@@ -8,5 +8,5 @@ import org.simpleframework.xml.Element;
 public class DashboardFilterColumn {
 
     @Element
-    public String column;
+    private String column;
 }

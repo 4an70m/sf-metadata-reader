@@ -17,8 +17,8 @@ public class Rule {
     @ElementList(inline = true, entry = "actions", required = false)
     private List<Action> actions;
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
     @Element(required = false)
     public String booleanFilter;

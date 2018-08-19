@@ -13,8 +13,8 @@ public class RecordTypes {
     @Element
     private String fullName;
 
-    @Element
-    private Boolean active;
+    @Element(name = "active")
+    private Boolean isActive;
 
     @Element(required = false)
     private String businessProcess;

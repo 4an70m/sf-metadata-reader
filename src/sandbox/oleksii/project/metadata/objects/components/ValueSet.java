@@ -19,8 +19,8 @@ public class ValueSet {
     @Element(required = false)
     private String controllingField;
 
-    @Element(required = false)
-    private Boolean restricted;
+    @Element(required = false, name = "restricted")
+    private Boolean isRestricted;
 
     @ElementList(required = false, inline = true)
     private List<ValueSettings> valueSettings;
