@@ -29,5 +29,4 @@ public class PermissionSets extends MetadataFolder {
     public List<PermissionSetMetadata> getMetadata() {
         return (List<PermissionSetMetadata>) super.getMetadata();
     }
-
 }

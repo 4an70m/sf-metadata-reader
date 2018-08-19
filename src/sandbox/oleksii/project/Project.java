@@ -14,6 +14,7 @@ import sandbox.oleksii.project.metadata.connectedApps.ConnectedApps;
 import sandbox.oleksii.project.metadata.dashboards.Dashboards;
 import sandbox.oleksii.project.metadata.datacategorygroups.DataCategoryGroups;
 import sandbox.oleksii.project.metadata.delegategroups.DelegateGroups;
+import sandbox.oleksii.project.metadata.duplicateRules.DuplicateRules;
 import sandbox.oleksii.project.metadata.groups.Groups;
 import sandbox.oleksii.project.metadata.homePageComponents.groups.HomePageComponents;
 import sandbox.oleksii.project.metadata.labels.Labels;
@@ -74,6 +75,7 @@ public class Project {
     public DelegateGroups delegateGroups;
     public Dashboards dashboards;
     public PermissionSets permissionSets;
+    public DuplicateRules duplicateRules;
 
     public Project(String rootPath) {
         this.root = new File(rootPath);
@@ -112,14 +114,14 @@ public class Project {
 //        this.dataCategoryGroups = new DataCategoryGroups(rootPath);
 //        this.delegateGroups = new DelegateGroups(rootPath);
 //        this.dashboards = new Dashboards(rootPath);
-        this.permissionSets = new PermissionSets(rootPath);
+//        this.permissionSets = new PermissionSets(rootPath);
+//        this.duplicateRules = new DuplicateRules(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
-//        Project p2 = new Project("C:\\Users\\4an70m\\Documents\\sublime\\hwks-aorta-dev3\\src");
-        Project p = new Project("avis-prod-src");
-        System.out.println(p.permissionSets.getMetadata().get(0).getEntity());
+        Project p = new Project("");
+        System.out.println(p.duplicateRules.getMetadata().get(0).getEntity());
 //        FolderWithMeta f = (FolderWithMeta) p.dashboards.getFolders().get(0);
 //        XmlMetadata m = (XmlMetadata) f.getMetadata().get(0);
 //        System.out.println(m.getEntity());
@@ -136,15 +138,10 @@ public class Project {
 //                });
     }
 
-//ToDo-ing:
-//dashboards
-//settings
-
 
 //ToDo:
 //email
 //documents
-//duplicateRules
 //escalationRules
 //flexipages
 //flowDefinitions
