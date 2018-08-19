@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.translations;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class Translations extends Folder {
+public class Translations extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".translation";
 
@@ -21,13 +21,13 @@ public class Translations extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new TranslationsMetadata(fileName));
+                this.metadata.add(new TranslationMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<TranslationsMetadata> getMetadata() {
-        return (List<TranslationsMetadata>) super.getMetadata();
+    public List<TranslationMetadata> getMetadata() {
+        return (List<TranslationMetadata>) super.getMetadata();
     }
 }

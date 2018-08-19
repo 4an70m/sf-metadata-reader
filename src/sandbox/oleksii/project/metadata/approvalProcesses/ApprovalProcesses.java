@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.approvalProcesses;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class ApprovalProcesses extends Folder {
+public class ApprovalProcesses extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".approvalProcess";
 

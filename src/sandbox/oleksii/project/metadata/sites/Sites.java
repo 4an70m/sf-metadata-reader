@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.sites;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class Sites extends Folder {
+public class Sites extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".site";
 
@@ -21,13 +21,13 @@ public class Sites extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new SitesMetadata(fileName));
+                this.metadata.add(new SiteMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<SitesMetadata> getMetadata() {
-        return (List<SitesMetadata>) super.getMetadata();
+    public List<SiteMetadata> getMetadata() {
+        return (List<SiteMetadata>) super.getMetadata();
     }
 }

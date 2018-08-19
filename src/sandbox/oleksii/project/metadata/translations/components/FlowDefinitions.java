@@ -2,7 +2,6 @@ package sandbox.oleksii.project.metadata.translations.components;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
-import org.simpleframework.xml.Path;
 
 import java.util.List;
 

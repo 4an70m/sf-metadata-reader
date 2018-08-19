@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.leadConvertSettings;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class LeadConvertSettings extends Folder {
+public class LeadConvertSettings extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".LeadConvertSetting";
 

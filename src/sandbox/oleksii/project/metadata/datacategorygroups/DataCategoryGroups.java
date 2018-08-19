@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.datacategorygroups;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class DataCategoryGroups extends Folder {
+public class DataCategoryGroups extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".datacategorygroup";
 
@@ -21,13 +21,13 @@ public class DataCategoryGroups extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new DataCategoryGroupsMetadata(fileName));
+                this.metadata.add(new DataCategoryGroupMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<DataCategoryGroupsMetadata> getMetadata() {
-        return (List<DataCategoryGroupsMetadata>) super.getMetadata();
+    public List<DataCategoryGroupMetadata> getMetadata() {
+        return (List<DataCategoryGroupMetadata>) super.getMetadata();
     }
 }

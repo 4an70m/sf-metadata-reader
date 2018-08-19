@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.autoResponseRules;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class AutoResponseRules extends Folder {
+public class AutoResponseRules extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".autoResponseRules";
 
@@ -21,13 +21,13 @@ public class AutoResponseRules extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new AutoResponseRulesMetadata(fileName));
+                this.metadata.add(new AutoResponseRuleMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<AutoResponseRulesMetadata> getMetadata() {
-        return (List<AutoResponseRulesMetadata>) super.getMetadata();
+    public List<AutoResponseRuleMetadata> getMetadata() {
+        return (List<AutoResponseRuleMetadata>) super.getMetadata();
     }
 }

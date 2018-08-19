@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.triggers;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 05.01.2018.
  */
-public class Triggers extends Folder {
+public class Triggers extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".trigger";
 
@@ -21,13 +21,13 @@ public class Triggers extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new TriggersMetadata(fileName));
+                this.metadata.add(new TriggerMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<TriggersMetadata> getMetadata() {
-        return (List<TriggersMetadata>) super.getMetadata();
+    public List<TriggerMetadata> getMetadata() {
+        return (List<TriggerMetadata>) super.getMetadata();
     }
 }

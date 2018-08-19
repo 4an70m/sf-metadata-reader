@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.tabs;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class Tabs extends Folder {
+public class Tabs extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".tab";
 
@@ -21,13 +21,13 @@ public class Tabs extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new TabsMetadata(fileName));
+                this.metadata.add(new TabMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<TabsMetadata> getMetadata() {
-        return (List<TabsMetadata>) super.getMetadata();
+    public List<TabMetadata> getMetadata() {
+        return (List<TabMetadata>) super.getMetadata();
     }
 }

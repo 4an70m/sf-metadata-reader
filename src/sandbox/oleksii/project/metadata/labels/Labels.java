@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.labels;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class Labels extends Folder {
+public class Labels extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".labels";
 

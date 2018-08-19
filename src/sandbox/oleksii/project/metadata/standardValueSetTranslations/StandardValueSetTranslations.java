@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.standardValueSetTranslations;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class StandardValueSetTranslations extends Folder {
+public class StandardValueSetTranslations extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".standardValueSetTranslation";
 
@@ -21,13 +21,13 @@ public class StandardValueSetTranslations extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new StandardValueSetTranslationsMetadata(fileName));
+                this.metadata.add(new StandardValueSetTranslationMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<StandardValueSetTranslationsMetadata> getMetadata() {
-        return (List<StandardValueSetTranslationsMetadata>) super.getMetadata();
+    public List<StandardValueSetTranslationMetadata> getMetadata() {
+        return (List<StandardValueSetTranslationMetadata>) super.getMetadata();
     }
 }

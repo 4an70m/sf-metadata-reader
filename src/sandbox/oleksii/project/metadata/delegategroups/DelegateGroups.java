@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.delegategroups;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class DelegateGroups extends Folder {
+public class DelegateGroups extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".delegateGroup";
 
@@ -21,13 +21,13 @@ public class DelegateGroups extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new DelegateGroupsMetadata(fileName));
+                this.metadata.add(new DelegateGroupMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<DelegateGroupsMetadata> getMetadata() {
-        return (List<DelegateGroupsMetadata>) super.getMetadata();
+    public List<DelegateGroupMetadata> getMetadata() {
+        return (List<DelegateGroupMetadata>) super.getMetadata();
     }
 }

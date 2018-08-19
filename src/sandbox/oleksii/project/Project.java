@@ -1,7 +1,8 @@
 package sandbox.oleksii.project;
 
-import sandbox.oleksii.project.core.XmlPojoEntity;
-import sandbox.oleksii.project.metadata.appMenus.AppMenu;
+import sandbox.oleksii.project.core.files.XmlMetadata;
+import sandbox.oleksii.project.core.folders.FolderWithMeta;
+import sandbox.oleksii.project.metadata.appMenus.AppMenus;
 import sandbox.oleksii.project.metadata.applications.Applications;
 import sandbox.oleksii.project.metadata.approvalProcesses.ApprovalProcesses;
 import sandbox.oleksii.project.metadata.assignmentRules.AssignmentRules;
@@ -21,9 +22,6 @@ import sandbox.oleksii.project.metadata.labels.Labels;
 import sandbox.oleksii.project.metadata.leadConvertSettings.LeadConvertSettings;
 import sandbox.oleksii.project.metadata.matchingRules.MatchingRules;
 import sandbox.oleksii.project.metadata.objects.Objects;
-import sandbox.oleksii.project.metadata.objects.ObjectsMetadata;
-import sandbox.oleksii.project.metadata.objects.ObjectsPojo;
-import sandbox.oleksii.project.metadata.objects.components.Fields;
 import sandbox.oleksii.project.metadata.pages.Pages;
 import sandbox.oleksii.project.metadata.permissionSets.PermissionSets;
 import sandbox.oleksii.project.metadata.sharingRules.SharingRules;
@@ -38,7 +36,6 @@ import sandbox.oleksii.project.metadata.weblinks.Weblinks;
 import sandbox.oleksii.project.metadata.workflows.Workflows;
 
 import java.io.File;
-import java.security.Permission;
 
 /**
  * Created by User on 04.01.2018.
@@ -53,7 +50,7 @@ public class Project {
     public Objects objects;
     public Components components;
     public Applications applications;
-    public AppMenu appMenu;
+    public AppMenus appMenus;
     public AssignmentRules assignmentRules;
     public Certs certs;
     public Workflows workflows;
@@ -116,14 +113,18 @@ public class Project {
 //        this.cleanDataServices = new CleanDataServices(rootPath);
 //        this.dataCategoryGroups = new DataCategoryGroups(rootPath);
 //        this.delegateGroups = new DelegateGroups(rootPath);
-//        this.dashboards = new Dashboards(rootPath);
+        this.dashboards = new Dashboards(rootPath);
 //        this.permissionSets = new PermissionSets(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
+//        Project p2 = new Project("C:\\Users\\4an70m\\Documents\\sublime\\hwks-aorta-dev3\\src");
         Project p = new Project("avis-prod-src");
-        Project p2 = new Project("C:\\Users\\4an70m\\Documents\\sublime\\hwks-aorta-dev3\\src");
+        FolderWithMeta f = (FolderWithMeta) p.dashboards.getFolders().get(0);
+        XmlMetadata m = (XmlMetadata) f.getMetadata().get(0);
+        System.out.println(m.getEntity());
+//        System.out.println(p2.permissionSets.getMetadata().isEmpty());
 //        XmlPojoEntity metaPojo = p.delegateGroups.getMetadata().get(0).getEntity();
 //        p.delegateGroups.getMetadata().get(0).writeToFile();
 //        System.out.println(pojo);

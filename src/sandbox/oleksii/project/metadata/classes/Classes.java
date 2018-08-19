@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.classes;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class Classes extends Folder {
+public class Classes extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".cls";
 
@@ -16,8 +16,8 @@ public class Classes extends Folder {
     }
 
     @Override
-    public List<ClassesMetadata> getMetadata() {
-        return (List<ClassesMetadata>) super.getMetadata();
+    public List<ClassMetadata> getMetadata() {
+        return (List<ClassMetadata>) super.getMetadata();
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Classes extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new ClassesMetadata(fileName));
+                this.metadata.add(new ClassMetadata(fileName));
             }
         }
     }

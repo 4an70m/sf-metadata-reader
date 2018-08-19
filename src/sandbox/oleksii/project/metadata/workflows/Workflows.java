@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.workflows;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class Workflows extends Folder {
+public class Workflows extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".workflow";
 
@@ -21,13 +21,13 @@ public class Workflows extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new WorkflowsMetadata(fileName));
+                this.metadata.add(new WorkflowMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<WorkflowsMetadata> getMetadata() {
-        return (List<WorkflowsMetadata>) super.getMetadata();
+    public List<WorkflowMetadata> getMetadata() {
+        return (List<WorkflowMetadata>) super.getMetadata();
     }
 }

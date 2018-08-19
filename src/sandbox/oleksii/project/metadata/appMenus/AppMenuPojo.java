@@ -3,7 +3,7 @@ package sandbox.oleksii.project.metadata.appMenus;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
-import sandbox.oleksii.project.core.XmlPojoEntity;
+import sandbox.oleksii.project.core.files.XmlPojoEntity;
 import sandbox.oleksii.project.metadata.appMenus.components.AppMenuItems;
 
 import java.util.List;

@@ -4,12 +4,8 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
-import sandbox.oleksii.project.core.XmlPojoEntity;
+import sandbox.oleksii.project.core.files.XmlPojoEntity;
 import sandbox.oleksii.project.metadata.leadConvertSettings.components.ObjectMapping;
-import sandbox.oleksii.project.metadata.workflows.components.Alert;
-import sandbox.oleksii.project.metadata.workflows.components.FieldUpdate;
-import sandbox.oleksii.project.metadata.workflows.components.Rule;
-import sandbox.oleksii.project.metadata.workflows.components.Task;
 
 import java.util.List;
 

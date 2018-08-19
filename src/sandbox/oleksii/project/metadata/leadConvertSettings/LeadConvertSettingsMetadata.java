@@ -2,7 +2,7 @@ package sandbox.oleksii.project.metadata.leadConvertSettings;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
-import sandbox.oleksii.project.core.XmlMetadata;
+import sandbox.oleksii.project.core.files.XmlMetadata;
 
 /**
  * Created by User on 05.01.2018.

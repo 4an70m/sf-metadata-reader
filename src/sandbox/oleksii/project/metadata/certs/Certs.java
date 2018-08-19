@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.certs;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 05.01.2018.
  */
-public class Certs extends Folder {
+public class Certs extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".crt";
 
@@ -21,13 +21,13 @@ public class Certs extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new CertsMetadata(fileName));
+                this.metadata.add(new CertMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<CertsMetadata> getMetadata() {
-        return (List<CertsMetadata>) super.getMetadata();
+    public List<CertMetadata> getMetadata() {
+        return (List<CertMetadata>) super.getMetadata();
     }
 }

@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.homePageComponents.groups;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class HomePageComponents extends Folder {
+public class HomePageComponents extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".homePageComponent";
 
@@ -21,13 +21,13 @@ public class HomePageComponents extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new HomePageComponentsMetadata(fileName));
+                this.metadata.add(new HomePageComponentMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<HomePageComponentsMetadata> getMetadata() {
-        return (List<HomePageComponentsMetadata>) super.getMetadata();
+    public List<HomePageComponentMetadata> getMetadata() {
+        return (List<HomePageComponentMetadata>) super.getMetadata();
     }
 }

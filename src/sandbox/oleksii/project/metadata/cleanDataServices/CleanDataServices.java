@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.cleanDataServices;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 04.01.2018.
  */
-public class CleanDataServices extends Folder {
+public class CleanDataServices extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".cleanDataService";
 
@@ -21,13 +21,13 @@ public class CleanDataServices extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new CleanDataServicesMetadata(fileName));
+                this.metadata.add(new CleanDataServiceMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<CleanDataServicesMetadata> getMetadata() {
-        return (List<CleanDataServicesMetadata>) super.getMetadata();
+    public List<CleanDataServiceMetadata> getMetadata() {
+        return (List<CleanDataServiceMetadata>) super.getMetadata();
     }
 }

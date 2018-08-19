@@ -1,13 +1,13 @@
 package sandbox.oleksii.project.metadata.staticResources;
 
-import sandbox.oleksii.project.core.Folder;
+import sandbox.oleksii.project.core.folders.MetadataFolder;
 
 import java.util.List;
 
 /**
  * Created by User on 05.01.2018.
  */
-public class StaticResources extends Folder {
+public class StaticResources extends MetadataFolder {
 
     public static final String CLASS_EXTENSION = ".resource";
 
@@ -21,13 +21,13 @@ public class StaticResources extends Folder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new StaticResourcesMetadata(fileName));
+                this.metadata.add(new StaticResourceMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<StaticResourcesMetadata> getMetadata() {
-        return (List<StaticResourcesMetadata>) super.getMetadata();
+    public List<StaticResourceMetadata> getMetadata() {
+        return (List<StaticResourceMetadata>) super.getMetadata();
     }
 }
