@@ -47,22 +47,4 @@ public class TabPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private String scontrol;
-
-    @Override
-    public String toString() {
-        return "TabsPojo{" +
-                "label='" + label + '\'' +
-                ", icon='" + icon + '\'' +
-                ", customObject=" + isCustomObject +
-                ", description='" + description + '\'' +
-                ", mobileReady=" + isMobileReady +
-                ", page='" + page + '\'' +
-                ", motif='" + motif + '\'' +
-                ", frameHeight='" + frameHeight + '\'' +
-                ", hasSidebar=" + hasSidebar +
-                ", url='" + url + '\'' +
-                ", urlEncodingKey='" + urlEncodingKey + '\'' +
-                ", scontrol='" + scontrol + '\'' +
-                '}';
-    }
 }

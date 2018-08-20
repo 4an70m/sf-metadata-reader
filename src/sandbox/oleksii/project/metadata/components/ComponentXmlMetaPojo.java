@@ -20,13 +20,4 @@ public class ComponentXmlMetaPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private String description;
-
-    @Override
-    public String toString() {
-        return "ComponentsMetaPojo{" +
-                "apiVersion='" + apiVersion + '\'' +
-                ", label='" + label + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

@@ -19,13 +19,4 @@ public class AssignmentRule {
 
     @ElementList(inline = true, entry = "ruleEntry", required = false)
     private List<RuleEntry> ruleEntries;
-
-    @Override
-    public String toString() {
-        return "AssignmentRule{" +
-                "fullName='" + fullName + '\'' +
-                ", active=" + isActive +
-                ", ruleEntries=" + ruleEntries +
-                '}';
-    }
 }

@@ -22,14 +22,4 @@ public class Label {
     @Element
     private String value;
 
-    @Override
-    public String toString() {
-        return "Label{" +
-                "fullName='" + fullName + '\'' +
-                ", language='" + language + '\'' +
-                ", isProtected=" + isProtected +
-                ", shortDescription='" + shortDescription + '\'' +
-                ", value='" + value + '\'' +
-                '}';
-    }
 }

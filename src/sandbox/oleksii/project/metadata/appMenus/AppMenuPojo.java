@@ -17,11 +17,4 @@ public class AppMenuPojo extends XmlPojoEntity {
 
     @ElementList(inline = true, entry = "appMenuItems")
     private List<AppMenuItems> appMenuItems;
-
-    @Override
-    public String toString() {
-        return "AppMenuPojo{" +
-                "appMenuItems=" + appMenuItems +
-                '}';
-    }
 }

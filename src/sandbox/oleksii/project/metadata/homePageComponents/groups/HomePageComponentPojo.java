@@ -26,14 +26,4 @@ public class HomePageComponentPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private String width;
-
-    @Override
-    public String toString() {
-        return "HomePageComponentsPojo{" +
-                "body=" + body +
-                ", links=" + links +
-                ", pageComponentType='" + pageComponentType + '\'' +
-                ", width='" + width + '\'' +
-                '}';
-    }
 }

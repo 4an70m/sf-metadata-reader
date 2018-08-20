@@ -12,12 +12,4 @@ public class AppMenuItems {
 
     @Element
     String type;
-
-    @Override
-    public String toString() {
-        return "AppMenuItems{" +
-                "name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                '}';
-    }
 }

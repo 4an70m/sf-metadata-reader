@@ -15,13 +15,4 @@ public class FolderShare {
 
     @Element
     private String sharedToType;
-
-    @Override
-    public String toString() {
-        return "FolderShare{" +
-                "accessLevel='" + accessLevel + '\'' +
-                ", sharedTo='" + sharedTo + '\'' +
-                ", sharedToType='" + sharedToType + '\'' +
-                '}';
-    }
 }

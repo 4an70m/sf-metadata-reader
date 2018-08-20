@@ -17,11 +17,4 @@ public class AutoResponseRulePojo extends XmlPojoEntity {
 
     @ElementList(inline = true, required = false, entry = "autoResponseRule")
     private List<AutoResponseRule> autoResponseRules;
-
-    @Override
-    public String toString() {
-        return "AutoResponseRulesPojo{" +
-                "autoResponseRules=" + autoResponseRules +
-                '}';
-    }
 }

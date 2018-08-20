@@ -17,11 +17,4 @@ public class StandardValueSetTranslationPojo extends XmlPojoEntity {
 
     @ElementList(inline = true, entry = "valueTranslation")
     private List<ValueTranslation> valueTranslations;
-
-    @Override
-    public String toString() {
-        return "StandardValueSetTranslationsPojo{" +
-                "valueTranslations=" + valueTranslations +
-                '}';
-    }
 }

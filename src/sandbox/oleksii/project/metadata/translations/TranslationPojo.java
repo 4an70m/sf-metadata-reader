@@ -39,16 +39,4 @@ public class TranslationPojo extends XmlPojoEntity {
 
     @ElementList(inline = true, entry = "scontrols")
     private List<LabelTranslation> scontrols;
-
-    @Override
-    public String toString() {
-        return "TranslationsPojo{" +
-                "customLabels=" + customLabels +
-                ", customPageWebLinks=" + customPageWebLinks +
-                ", customTabs=" + customTabs +
-                ", quickActions=" + quickActions +
-                ", reportTypes=" + reportTypes +
-                ", scontrols=" + scontrols +
-                '}';
-    }
 }

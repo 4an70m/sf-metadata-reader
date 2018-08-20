@@ -20,13 +20,4 @@ public class Section {
 
     @Element
     private String name;
-
-    @Override
-    public String toString() {
-        return "Section{" +
-                "columns=" + columns +
-                ", label='" + label + '\'' +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

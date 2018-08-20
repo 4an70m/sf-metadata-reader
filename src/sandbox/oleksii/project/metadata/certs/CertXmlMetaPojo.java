@@ -56,16 +56,4 @@ public class CertXmlMetaPojo extends XmlPojoEntity {
         DateFormat df = new SimpleDateFormat(DATE_TIME_FORMAT);
         return df.format(expirationDate);
     }
-
-    @Override
-    public String toString() {
-        return "CertsMetaPojo{" +
-                "caSigned=" + caSigned +
-                ", encryptedWithPlatformEncryption=" + isEncryptedWithPlatformEncryption +
-                ", expirationDate=" + expirationDate +
-                ", keySize=" + keySize +
-                ", masterLabel='" + masterLabel + '\'' +
-                ", privateKeyExportable=" + isPrivateKeyExportable +
-                '}';
-    }
 }

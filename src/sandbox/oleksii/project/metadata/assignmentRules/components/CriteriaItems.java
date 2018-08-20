@@ -15,13 +15,4 @@ public class CriteriaItems {
 
     @Element
     private String value;
-
-    @Override
-    public String toString() {
-        return "CriteriaItems{" +
-                "field='" + field + '\'' +
-                ", operation='" + operation + '\'' +
-                ", value='" + value + '\'' +
-                '}';
-    }
 }

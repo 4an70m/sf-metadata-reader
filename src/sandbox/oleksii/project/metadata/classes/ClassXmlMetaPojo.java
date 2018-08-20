@@ -21,13 +21,4 @@ public class ClassXmlMetaPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private PackageVersions packageVersions;
-
-    @Override
-    public String toString() {
-        return "TriggersMetaPojo{" +
-                "apiVersion='" + apiVersion + '\'' +
-                ", status='" + status + '\'' +
-                '}';
-    }
-
 }

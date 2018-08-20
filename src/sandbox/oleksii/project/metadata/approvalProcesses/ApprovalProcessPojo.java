@@ -73,29 +73,4 @@ public class ApprovalProcessPojo extends XmlPojoEntity {
 
     @Element
     private Boolean showApprovalHistory;
-
-    @Override
-    public String toString() {
-        return "ApprovalProcessPojo{" +
-                "active=" + isActive +
-                ", allowRecall=" + allowRecall +
-                ", allowedSubmitters=" + allowedSubmitters +
-                ", approvalPageFields=" + approvalPageFields +
-                ", approvalSteps=" + approvalSteps +
-                ", description='" + description + '\'' +
-                ", emailTemplate='" + emailTemplate + '\'' +
-                ", enableMobileDeviceAccess=" + enableMobileDeviceAccess +
-                ", entryCriteria=" + entryCriteria +
-                ", finalApprovalActions=" + finalApprovalActions +
-                ", finalApprovalRecordLock=" + finalApprovalRecordLock +
-                ", finalRejectionActions=" + finalRejectionActions +
-                ", finalRejectionRecordLock=" + finalRejectionRecordLock +
-                ", initialSubmissionActions=" + initialSubmissionActions +
-                ", label='" + label + '\'' +
-                ", nextAutomatedApprover=" + nextAutomatedApprover +
-                ", recallActions=" + recallActions +
-                ", recordEditability='" + recordEditability + '\'' +
-                ", showApprovalHistory=" + showApprovalHistory +
-                '}';
-    }
 }

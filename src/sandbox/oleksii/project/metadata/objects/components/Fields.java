@@ -127,48 +127,4 @@ public class Fields {
 
     @Element(required = false)
     private String displayFormat;
-
-    @Override
-    public String toString() {
-        return "Fields{" +
-                "fullName='" + fullName + '\'' +
-                ", caseSensitive=" + isCaseSensitive +
-                ", externalId=" + isExternalId +
-                ", fieldManageability='" + fieldManageability + '\'' +
-                ", formula='" + formula + '\'' +
-                ", formulaTreatBlanksAs=" + formulaTreatBlanksAs +
-                ", label='" + label + '\'' +
-                ", lookupFilter=" + lookupFilter +
-                ", referenceTo='" + referenceTo + '\'' +
-                ", relationshipLabel='" + relationshipLabel + '\'' +
-                ", relationshipName='" + relationshipName + '\'' +
-                ", relationshipOrder='" + relationshipOrder + '\'' +
-                ", reparentableMasterDetail=" + isReparentableMasterDetail +
-                ", precision=" + precision +
-                ", scale=" + scale +
-                ", summaryFilterItems=" + summaryFilterItems +
-                ", summarizedField='" + summarizedField + '\'' +
-                ", summaryForeignKey='" + summaryForeignKey + '\'' +
-                ", summaryOperation='" + summaryOperation + '\'' +
-                ", length=" + length +
-                ", required=" + isRequired +
-                ", trackFeedHistory='" + trackFeedHistory + '\'' +
-                ", trackHistory=" + trackHistory +
-                ", trackTrending=" + trackTrending +
-                ", type='" + type + '\'' +
-                ", unique=" + isUnique +
-                ", valueSet=" + valueSet +
-                ", inlineHelpText='" + inlineHelpText + '\'' +
-                ", visibleLines=" + visibleLines +
-                ", description='" + description + '\'' +
-                ", defaultValue=" + isDefaultValue +
-                ", displayLocationInDecimal=" + displayLocationInDecimal +
-                ", deleteConstraint='" + deleteConstraint + '\'' +
-                ", writeRequiresMasterRead=" + writeRequiresMasterRead +
-                ", deprecated=" + isDeprecated +
-                ", maskChar='" + maskChar + '\'' +
-                ", maskType='" + maskType + '\'' +
-                ", displayFormat='" + displayFormat + '\'' +
-                '}';
-    }
 }

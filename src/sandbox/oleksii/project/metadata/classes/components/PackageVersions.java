@@ -15,13 +15,4 @@ public class PackageVersions {
 
     @Element
     private String namespace;
-
-    @Override
-    public String toString() {
-        return "PackageVersions{" +
-                "minorNumber='" + minorNumber + '\'' +
-                ", majorNumber='" + majorNumber + '\'' +
-                ", namespace='" + namespace + '\'' +
-                '}';
-    }
 }

@@ -24,14 +24,4 @@ public class LabelTranslation {
 
     @ElementList(inline = true, required = false, entry = "sections")
     private List<Section> sections;
-
-    @Override
-    public String toString() {
-        return "LabelTranslation{" +
-                "label='" + label + '\'' +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", sections=" + sections +
-                '}';
-    }
 }

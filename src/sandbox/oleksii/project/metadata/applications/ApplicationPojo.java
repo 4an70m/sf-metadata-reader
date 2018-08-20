@@ -96,36 +96,4 @@ public class ApplicationPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private WorkspaceMappings workspaceMappings;
-
-    @Override
-    public String toString() {
-        return "ApplicationsPojo{" +
-                "customApplicationComponents=" + customApplicationComponents +
-                ", defaultLandingTab='" + defaultLandingTab + '\'' +
-                ", description='" + description + '\'' +
-                ", formFactors='" + formFactors + '\'' +
-                ", label='" + label + '\'' +
-                ", logo='" + logo + '\'' +
-                ", listRefreshMethod='" + listRefreshMethod + '\'' +
-                ", saveUserSessions='" + saveUserSessions + '\'' +
-                ", tabs=" + tabs +
-                ", uiType='" + uiType + '\'' +
-                ", navType='" + navType + '\'' +
-                ", setupExperience='" + setupExperience + '\'' +
-                ", utilityBar='" + utilityBar + '\'' +
-                ", detailPageRefreshMethod='" + detailPageRefreshMethod + '\'' +
-                ", enableCustomizeMyTabs=" + enableCustomizeMyTabs +
-                ", enableKeyboardShortcuts=" + enableKeyboardShortcuts +
-                ", enableListViewHover=" + enableListViewHover +
-                ", enableListViewReskin=" + enableListViewReskin +
-                ", enableMultiMonitorComponents=" + enableMultiMonitorComponents +
-                ", enablePinTabs=" + enablePinTabs +
-                ", enableTabHover=" + enableTabHover +
-                ", enableTabLimits=" + enableTabLimits +
-                ", isServiceCloudConsole=" + isServiceCloudConsole +
-                ", keyboardShortcuts=" + keyboardShortcuts +
-                ", listPlacement=" + listPlacement +
-                ", workspaceMappings=" + workspaceMappings +
-                '}';
-    }
 }

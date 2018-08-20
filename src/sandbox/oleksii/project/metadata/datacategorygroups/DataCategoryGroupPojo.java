@@ -30,15 +30,4 @@ public class DataCategoryGroupPojo extends XmlPojoEntity {
 
     @ElementList(entry = "object")
     private ArrayList<String> objectUsage;
-
-    @Override
-    public String toString() {
-        return "DataCategoryGroupsPojo{" +
-                "active=" + isActive +
-                ", dataCategory=" + dataCategory +
-                ", description='" + description + '\'' +
-                ", label='" + label + '\'' +
-                ", objectUsage=" + objectUsage +
-                '}';
-    }
 }

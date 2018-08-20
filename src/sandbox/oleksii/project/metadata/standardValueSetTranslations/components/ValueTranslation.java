@@ -14,12 +14,4 @@ public class ValueTranslation {
     @Element
     @Convert(StringEmptyConverter.class)
     private String translation;
-
-    @Override
-    public String toString() {
-        return "ValueTranslation{" +
-                "masterLabel='" + masterLabel + '\'' +
-                ", translation='" + translation + '\'' +
-                '}';
-    }
 }

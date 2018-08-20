@@ -20,13 +20,4 @@ public class StaticResourceXmlMetaPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private String description;
-
-    @Override
-    public String toString() {
-        return "StaticResourcesMetaPojo{" +
-                "cacheControl='" + cacheControl + '\'' +
-                ", contentType='" + contentType + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

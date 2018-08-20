@@ -8,7 +8,7 @@ import sandbox.oleksii.project.core.files.XmlPojoEntity;
 /**
  * Created by 4an70m on 19.08.2018.
  */
-@Root(name="ApexClass")
+@Root(name="Scontrol")
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
 public class SControlXmlMetaPojo extends XmlPojoEntity {
 

@@ -21,12 +21,4 @@ public class StandardValueSetPojo extends XmlPojoEntity {
 
     @ElementList(inline = true, required = false, entry = "standardValue")
     private List<StandardValue> standardValue;
-
-    @Override
-    public String toString() {
-        return "StandardValueSetsPojo{" +
-                "sorted=" + isSorted +
-                ", standardValue=" + standardValue +
-                '}';
-    }
 }

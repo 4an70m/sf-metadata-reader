@@ -17,11 +17,4 @@ public class AssignmentRulePojo extends XmlPojoEntity {
 
     @ElementList(inline = true, entry = "assignmentRule")
     private List<AssignmentRule> assignmentRules;
-
-    @Override
-    public String toString() {
-        return "AssignmentRulesPojo{" +
-                "assignmentRules=" + assignmentRules +
-                '}';
-    }
 }

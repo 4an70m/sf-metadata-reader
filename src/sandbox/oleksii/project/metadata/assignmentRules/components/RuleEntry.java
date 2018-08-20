@@ -28,15 +28,4 @@ public class RuleEntry {
     @Element(required = false)
     private String template;
 
-    @Override
-    public String toString() {
-        return "RuleEntry{" +
-                "assignedTo='" + assignedTo + '\'' +
-                ", assignedToType='" + assignedToType + '\'' +
-                ", formula='" + formula + '\'' +
-                ", booleanFilter='" + booleanFilter + '\'' +
-                ", criteriaItems=" + criteriaItems +
-                ", template='" + template + '\'' +
-                '}';
-    }
 }

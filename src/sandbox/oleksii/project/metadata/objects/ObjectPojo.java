@@ -129,46 +129,4 @@ public class ObjectPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private ArticleTypeChannelDisplay articleTypeChannelDisplay;
-
-    @Override
-    public String toString() {
-        return "ObjectsPojo{" +
-                "actionOverrides=" + actionOverrides +
-                ", businessProcesses=" + businessProcesses +
-                ", enableActivities=" + enableActivities +
-                ", deploymentStatus='" + deploymentStatus + '\'' +
-                ", deprecated=" + isDeprecated +
-                ", allowInChatterGroups=" + allowInChatterGroups +
-                ", compactLayoutAssignment='" + compactLayoutAssignment + '\'' +
-                ", customSettingsType='" + customSettingsType + '\'' +
-                ", description='" + description + '\'' +
-                ", enableBulkApi=" + enableBulkApi +
-                ", enableChangeDataCapture=" + enableChangeDataCapture +
-                ", enableEnhancedLookup=" + enableEnhancedLookup +
-                ", enableFeeds=" + enableFeeds +
-                ", externalSharingModel='" + externalSharingModel + '\'' +
-                ", enableHistory=" + enableHistory +
-                ", enableReports=" + enableReports +
-                ", enableSearch=" + enableSearch +
-                ", enableSharing=" + enableSharing +
-                ", enableStreamingApi=" + enableStreamingApi +
-                ", fieldSets=" + fieldSets +
-                ", fields=" + fields +
-                ", listViews=" + listViews +
-                ", recordTypeTrackFeedHistory=" + recordTypeTrackFeedHistory +
-                ", recordTypeTrackHistory=" + recordTypeTrackHistory +
-                ", recordTypes=" + recordTypes +
-                ", nameField=" + nameField +
-                ", pluralLabel='" + pluralLabel + '\'' +
-                ", searchLayouts=" + searchLayouts +
-                ", sharingModel='" + sharingModel + '\'' +
-                ", startsWith='" + startsWith + '\'' +
-                ", visibility='" + visibility + '\'' +
-                ", validationRules=" + validationRules +
-                ", webLinks=" + webLinks +
-                ", label='" + label + '\'' +
-                ", gender='" + gender + '\'' +
-                ", articleTypeChannelDisplay=" + articleTypeChannelDisplay +
-                '}';
-    }
 }

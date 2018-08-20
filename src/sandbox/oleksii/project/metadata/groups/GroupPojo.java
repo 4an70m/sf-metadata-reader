@@ -17,12 +17,4 @@ public class GroupPojo extends XmlPojoEntity {
 
     @Element
     private String name;
-
-    @Override
-    public String toString() {
-        return "GroupsPojo{" +
-                "doesIncludeBosses=" + doesIncludeBosses +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

@@ -17,11 +17,4 @@ public class LabelsPojo extends XmlPojoEntity {
 
     @ElementList(inline = true, entry = "labels")
     private List<Label> labels;
-
-    @Override
-    public String toString() {
-        return "LabelsPojo{" +
-                "labels=" + labels +
-                '}';
-    }
 }

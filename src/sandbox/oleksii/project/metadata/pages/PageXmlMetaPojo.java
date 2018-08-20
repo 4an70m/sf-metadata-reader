@@ -30,16 +30,4 @@ public class PageXmlMetaPojo extends XmlPojoEntity {
 
     @Element(required = false)
     private PackageVersions packageVersions;
-
-    @Override
-    public String toString() {
-        return "TriggersMetaPojo{" +
-                "apiVersion='" + apiVersion + '\'' +
-                ", availableInTouch=" + availableInTouch +
-                ", confirmationTokenRequired=" + confirmationTokenRequired +
-                ", label='" + label + '\'' +
-                ", description='" + description + '\'' +
-                ", packageVersions=" + packageVersions +
-                '}';
-    }
 }

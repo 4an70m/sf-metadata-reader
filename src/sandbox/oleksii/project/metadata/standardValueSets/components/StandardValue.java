@@ -45,23 +45,4 @@ public class StandardValue {
 
     @Element(required = false)
     private String reverseRole;
-
-    @Override
-    public String toString() {
-        return "StandardValue{" +
-                "fullName='" + fullName + '\'' +
-                ", isDefault=" + isDefault +
-                ", label='" + label + '\'' +
-                ", description='" + description + '\'' +
-                ", cssExposed=" + isCssExposed +
-                ", closed=" + isClosed +
-                ", converted=" + isConverted +
-                ", forecastCategory='" + forecastCategory + '\'' +
-                ", probability=" + probability +
-                ", won=" + isWon +
-                ", highPriority=" + isHighPriority +
-                ", reviewed=" + isReviewed +
-                ", reverseRole='" + reverseRole + '\'' +
-                '}';
-    }
 }
