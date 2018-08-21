@@ -10,7 +10,7 @@ import sandbox.oleksii.project.core.files.XmlPojoEntity;
  */
 @Root(name="ProfileSessionSetting")
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
-public class ProfileSessionSettingMetadataPojo extends XmlPojoEntity {
+public class ProfileSessionSettingPojo extends XmlPojoEntity {
 
     @Element
     private Boolean forceLogout;

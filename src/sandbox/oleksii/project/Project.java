@@ -24,6 +24,7 @@ import sandbox.oleksii.project.metadata.matchingRules.MatchingRules;
 import sandbox.oleksii.project.metadata.objects.Objects;
 import sandbox.oleksii.project.metadata.pages.Pages;
 import sandbox.oleksii.project.metadata.permissionSets.PermissionSets;
+import sandbox.oleksii.project.metadata.profilePasswordPolicies.ProfilePasswordPolicies;
 import sandbox.oleksii.project.metadata.profileSessionSettings.ProfileSessionSettings;
 import sandbox.oleksii.project.metadata.quickActions.QuickActions;
 import sandbox.oleksii.project.metadata.remoteSiteSettings.RemoteSiteSettings;
@@ -90,6 +91,7 @@ public class Project {
     public QuickActions quickActions;
     public ProfileSessionSettings profileSessionSettings;
     public Portals portals;
+    public ProfilePasswordPolicies profilePasswordPolicies;
 
     public Project(String rootPath) {
         this.root = new File(rootPath);
@@ -136,14 +138,15 @@ public class Project {
 //        this.remoteSiteSettings = new RemoteSiteSettings(rootPath);
 //        this.quickActions = new QuickActions(rootPath);
 //        this.profileSessionSettings = new ProfileSessionSettings(rootPath);
-        this.portals = new Portals(rootPath);
+//        this.portals = new Portals(rootPath);
+        this.profilePasswordPolicies = new ProfilePasswordPolicies(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
 //        Project p2 = new Project("");
         Project p = new Project("");
-        p.portals.getMetadata().stream().forEach(item -> {
+        p.profilePasswordPolicies.getMetadata().stream().forEach(item -> {
             try {
                 System.out.println(item.getEntity().toXml());
                 System.out.println();
@@ -168,7 +171,6 @@ public class Project {
 //letterhead
 //newreps
 //objectTranslations
-//profilePasswordPolicies
 //profiles
 //queues
 //reports

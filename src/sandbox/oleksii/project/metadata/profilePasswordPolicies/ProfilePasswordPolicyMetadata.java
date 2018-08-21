@@ -1,4 +1,4 @@
-package sandbox.oleksii.project.metadata.profileSessionSettings;
+package sandbox.oleksii.project.metadata.profilePasswordPolicies;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
@@ -7,9 +7,9 @@ import sandbox.oleksii.project.core.files.XmlMetadata;
 /**
  * Created by User on 05.01.2018.
  */
-public class ProfileSessionSettingMetadata extends XmlMetadata {
+public class ProfilePasswordPolicyMetadata extends XmlMetadata {
 
-    public ProfileSessionSettingMetadata(String fileName) {
+    public ProfilePasswordPolicyMetadata(String fileName) {
         super(fileName);
     }
 
@@ -17,7 +17,7 @@ public class ProfileSessionSettingMetadata extends XmlMetadata {
     protected void readXml() {
         Serializer serializer = new Persister();
         try {
-            this.entity = serializer.read(ProfileSessionSettingPojo.class, this);
+            this.entity = serializer.read(ProfilePasswordPolicyPojo.class, this);
         } catch (Exception e) {
             e.printStackTrace();
         }
