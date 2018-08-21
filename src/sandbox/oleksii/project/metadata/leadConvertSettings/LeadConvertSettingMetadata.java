@@ -7,9 +7,9 @@ import sandbox.oleksii.project.core.files.XmlMetadata;
 /**
  * Created by User on 05.01.2018.
  */
-public class LeadConvertSettingsMetadata extends XmlMetadata {
+public class LeadConvertSettingMetadata extends XmlMetadata {
 
-    public LeadConvertSettingsMetadata(String fileName) {
+    public LeadConvertSettingMetadata(String fileName) {
         super(fileName);
     }
 
@@ -17,7 +17,7 @@ public class LeadConvertSettingsMetadata extends XmlMetadata {
     protected void readXml() {
         Serializer serializer = new Persister();
         try {
-            this.entity = serializer.read(LeadConvertSettingsPojo.class, this);
+            this.entity = serializer.read(LeadConvertSettingPojo.class, this);
         } catch (Exception e) {
             e.printStackTrace();
         }

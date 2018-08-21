@@ -1,4 +1,4 @@
-package sandbox.oleksii.project.metadata.homePageComponents.groups;
+package sandbox.oleksii.project.metadata.homePageComponents;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by User on 21.08.2018.
  */
-@Root(name="RemoteSiteSetting")
+@Root(name="QuickAction")
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
 public class QuickActionPojo extends XmlPojoEntity {
 

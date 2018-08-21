@@ -1,4 +1,4 @@
-package sandbox.oleksii.project.metadata.homePageComponents.groups;
+package sandbox.oleksii.project.metadata.homePageComponents;
 
 import sandbox.oleksii.project.core.folders.MetadataFolder;
 

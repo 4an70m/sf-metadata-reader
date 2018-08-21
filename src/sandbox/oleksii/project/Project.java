@@ -16,13 +16,14 @@ import sandbox.oleksii.project.metadata.datacategorygroups.DataCategoryGroups;
 import sandbox.oleksii.project.metadata.delegategroups.DelegateGroups;
 import sandbox.oleksii.project.metadata.duplicateRules.DuplicateRules;
 import sandbox.oleksii.project.metadata.groups.Groups;
-import sandbox.oleksii.project.metadata.homePageComponents.groups.HomePageComponents;
+import sandbox.oleksii.project.metadata.homePageComponents.HomePageComponents;
 import sandbox.oleksii.project.metadata.labels.Labels;
 import sandbox.oleksii.project.metadata.leadConvertSettings.LeadConvertSettings;
 import sandbox.oleksii.project.metadata.matchingRules.MatchingRules;
 import sandbox.oleksii.project.metadata.objects.Objects;
 import sandbox.oleksii.project.metadata.pages.Pages;
 import sandbox.oleksii.project.metadata.permissionSets.PermissionSets;
+import sandbox.oleksii.project.metadata.profileSessionSettings.ProfileSessionSettings;
 import sandbox.oleksii.project.metadata.quickActions.QuickActions;
 import sandbox.oleksii.project.metadata.remoteSiteSettings.RemoteSiteSettings;
 import sandbox.oleksii.project.metadata.reportTypes.ReportTypes;
@@ -86,6 +87,7 @@ public class Project {
     public ReportTypes reportTypes;
     public RemoteSiteSettings remoteSiteSettings;
     public QuickActions quickActions;
+    public ProfileSessionSettings profileSessionSettings;
 
     public Project(String rootPath) {
         this.root = new File(rootPath);
@@ -130,28 +132,22 @@ public class Project {
 //        this.roles = new Roles(rootPath);
 //        this.reportTypes = new ReportTypes(rootPath);
 //        this.remoteSiteSettings = new RemoteSiteSettings(rootPath);
-        this.quickActions = new QuickActions(rootPath);
+//        this.quickActions = new QuickActions(rootPath);
+        this.profileSessionSettings = new ProfileSessionSettings(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
 //        Project p2 = new Project("");
         Project p = new Project("");
-        System.out.println(p.quickActions.getMetadata().get(3).getEntity().toXml());
-//        FolderWithMeta f = (FolderWithMeta) p.dashboards.getFolders().get(0);
-//        XmlMetadata m = (XmlMetadata) f.getMetadata().get(0);
-//        System.out.println(m.getEntity());
-//        System.out.println(p2.permissionSets.getMetadata().isEmpty());
-//        XmlPojoEntity metaPojo = p.delegateGroups.getMetadata().get(0).getEntity();
-//        p.delegateGroups.getMetadata().get(0).writeToFile();
-//        System.out.println(pojo);
-//        p.classes.getMetadata()
-//                .stream()
-//                .forEach(classesMetadata -> {
-//                    if (classesMetadata.getRelatedMeta().getEntity().getApiVersion().contains("39.0")) {
-//                        System.out.println(classesMetadata.getName());
-//                    }
-//                });
+        p.profileSessionSettings.getMetadata().stream().forEach(item -> {
+            try {
+                System.out.println(item.getEntity().toXml());
+                System.out.println();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 
 
@@ -172,7 +168,6 @@ public class Project {
 //portals
 //profilePasswordPolicies
 //profiles
-//profileSessionSettings
 //queues
 //reports
 }

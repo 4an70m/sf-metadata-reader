@@ -1,4 +1,4 @@
-package sandbox.oleksii.project.metadata.homePageComponents.groups;
+package sandbox.oleksii.project.metadata.homePageComponents;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;

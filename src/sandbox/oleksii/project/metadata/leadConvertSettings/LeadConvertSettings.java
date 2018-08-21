@@ -21,13 +21,13 @@ public class LeadConvertSettings extends MetadataFolder {
         for (String fileName : filePaths) {
             String extension = this.getExtension(fileName);
             if (CLASS_EXTENSION.equals(extension)) {
-                this.metadata.add(new LeadConvertSettingsMetadata(fileName));
+                this.metadata.add(new LeadConvertSettingMetadata(fileName));
             }
         }
     }
 
     @Override
-    public List<LeadConvertSettingsMetadata> getMetadata() {
-        return (List<LeadConvertSettingsMetadata>) super.getMetadata();
+    public List<LeadConvertSettingMetadata> getMetadata() {
+        return (List<LeadConvertSettingMetadata>) super.getMetadata();
     }
 }

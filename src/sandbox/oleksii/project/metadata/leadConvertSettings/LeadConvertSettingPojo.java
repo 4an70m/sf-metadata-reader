@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Root(name="LeadConvertSettings")
 @Namespace(reference = "http://soap.sforce.com/2006/04/metadata")
-public class LeadConvertSettingsPojo extends XmlPojoEntity {
+public class LeadConvertSettingPojo extends XmlPojoEntity {
 
     @Element
     private Boolean allowOwnerChange;
