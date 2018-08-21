@@ -25,7 +25,7 @@ import sandbox.oleksii.project.metadata.pages.Pages;
 import sandbox.oleksii.project.metadata.permissionSets.PermissionSets;
 import sandbox.oleksii.project.metadata.quickActions.QuickActions;
 import sandbox.oleksii.project.metadata.remoteSiteSettings.RemoteSiteSettings;
-import sandbox.oleksii.project.metadata.reportTypes.components.ReportTypes;
+import sandbox.oleksii.project.metadata.reportTypes.ReportTypes;
 import sandbox.oleksii.project.metadata.roles.Roles;
 import sandbox.oleksii.project.metadata.scontrols.SControls;
 import sandbox.oleksii.project.metadata.sharingRules.SharingRules;
@@ -174,6 +174,5 @@ public class Project {
 //profiles
 //profileSessionSettings
 //queues
-//quickActions
 //reports
 }

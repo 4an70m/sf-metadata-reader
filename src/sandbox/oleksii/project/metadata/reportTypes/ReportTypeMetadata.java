@@ -1,4 +1,4 @@
-package sandbox.oleksii.project.metadata.reportTypes.components;
+package sandbox.oleksii.project.metadata.reportTypes;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;

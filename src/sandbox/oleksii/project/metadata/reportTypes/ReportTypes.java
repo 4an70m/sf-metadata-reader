@@ -1,4 +1,4 @@
-package sandbox.oleksii.project.metadata.reportTypes.components;
+package sandbox.oleksii.project.metadata.reportTypes;
 
 import sandbox.oleksii.project.core.folders.MetadataFolder;
 
