@@ -6,7 +6,7 @@ import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import sandbox.oleksii.project.core.files.XmlPojoEntity;
 import sandbox.oleksii.project.metadata.reportTypes.components.Join;
-import sandbox.oleksii.project.metadata.reportTypes.components.Sections;
+import sandbox.oleksii.project.metadata.reportTypes.components.Section;
 
 import java.util.List;
 
@@ -36,5 +36,5 @@ public class ReportTypePojo extends XmlPojoEntity {
     private String label;
 
     @ElementList(inline = true, required = false, entry = "sections")
-    private List<Sections> sections;
+    private List<Section> sections;
 }

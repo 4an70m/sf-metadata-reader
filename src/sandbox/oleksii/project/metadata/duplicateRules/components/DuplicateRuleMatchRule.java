@@ -9,15 +9,17 @@ import java.util.List;
 /**
  * Created by 4an70m on 19.08.2018.
  */
-public class DuplicateRuleFilter {
+public class DuplicateRuleMatchRule {
 
-    @Element(required = false)
-    private String booleanFilter;
+    @ElementList(inline = true, required = false, entry = "objectMapping")
+    private List<ObjectMapping> objectMappings;
 
     @Attribute(name = "nil", required = false)
     private Boolean isNil;
 
+    @Element
+    private String matchRuleSObjectType;
 
-    @ElementList(inline = true, entry = "duplicateRuleFilterItems", required = false)
-    private List<DuplicateRuleFilterItem> duplicateRuleFilterItems;
+    @Element
+    private String matchingRule;
 }

@@ -4,7 +4,7 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import sandbox.oleksii.project.core.files.XmlPojoEntity;
-import sandbox.oleksii.project.metadata.appMenus.components.AppMenuItems;
+import sandbox.oleksii.project.metadata.appMenus.components.AppMenuItem;
 
 import java.util.List;
 
@@ -16,5 +16,5 @@ import java.util.List;
 public class AppMenuPojo extends XmlPojoEntity {
 
     @ElementList(inline = true, entry = "appMenuItems")
-    private List<AppMenuItems> appMenuItems;
+    private List<AppMenuItem> appMenuItems;
 }

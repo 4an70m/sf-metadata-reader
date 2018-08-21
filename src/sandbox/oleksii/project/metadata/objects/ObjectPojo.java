@@ -17,16 +17,16 @@ import java.util.List;
 public class ObjectPojo extends XmlPojoEntity {
 
     @ElementList(required = false, inline = true)
-    private List<ActionOverrides> actionOverrides;
+    private List<ActionOverride> actionOverrides;
 
     @ElementList(required = false, inline = true)
-    private List<BusinessProcesses> businessProcesses;
+    private List<BusinessProcess> businessProcesses;
 
     @Element(required = false)
     private Boolean enableActivities;
 
     @ElementList(required = false, inline = true)
-    private List<CompactLayouts> compactLayouts;
+    private List<CompactLayout> compactLayouts;
 
     @Element(required = false)
     private String deploymentStatus;
@@ -77,13 +77,13 @@ public class ObjectPojo extends XmlPojoEntity {
     private Boolean enableStreamingApi;
 
     @ElementList(required = false, inline = true)
-    private List<FieldSets> fieldSets;
+    private List<FieldSet> fieldSets;
 
     @ElementList(required = false, inline = true)
-    private List<Fields> fields;
+    private List<Field> fields;
 
     @ElementList(required = false, inline = true)
-    private List<ListViews> listViews;
+    private List<ListView> listViews;
 
     @Element(required = false)
     private Boolean recordTypeTrackFeedHistory;
@@ -92,7 +92,7 @@ public class ObjectPojo extends XmlPojoEntity {
     private Boolean recordTypeTrackHistory;
 
     @ElementList(required = false, inline = true)
-    private List<RecordTypes> recordTypes;
+    private List<RecordType> recordTypes;
 
     @Element(required = false)
     private NameField nameField;
@@ -101,13 +101,13 @@ public class ObjectPojo extends XmlPojoEntity {
     private String pluralLabel;
 
     @ElementList(required = false, inline = true)
-    private List<SearchLayouts> searchLayouts;
+    private List<SearchLayout> searchLayouts;
 
     @Element(required = false)
     private String sharingModel;
 
     @Element(required = false)
-    private SharingReasons sharingReasons;
+    private SharingReason sharingReasons;
 
     @Element(required = false)
     private String startsWith;
@@ -116,10 +116,10 @@ public class ObjectPojo extends XmlPojoEntity {
     private String visibility;
 
     @ElementList(required = false, inline = true)
-    private List<ValidationRules> validationRules;
+    private List<ValidationRule> validationRules;
 
     @ElementList(required = false, inline = true)
-    private List<WebLinks> webLinks;
+    private List<WebLink> webLinks;
 
     @Element(required = false)
     private String label;

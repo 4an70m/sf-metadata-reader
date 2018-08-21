@@ -23,7 +23,7 @@ public class RuleEntry {
     private String booleanFilter;
 
     @ElementList(inline = true, entry = "criteriaItems", required = false)
-    private List<CriteriaItems> criteriaItems;
+    private List<CriteriaItem> criteriaItems;
 
     @Element(required = false)
     private String template;

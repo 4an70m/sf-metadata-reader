@@ -10,6 +10,6 @@ import java.util.List;
 public class ArticleTypeChannelDisplay {
 
     @ElementList(inline = true, entry = "articleTypeTemplates")
-    private List<ArticleTypeTemplates> articleTypeTemplates;
+    private List<ArticleTypeTemplate> articleTypeTemplates;
 
 }

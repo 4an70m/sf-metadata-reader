@@ -4,7 +4,7 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import sandbox.oleksii.project.core.files.XmlPojoEntity;
-import sandbox.oleksii.project.metadata.classes.components.PackageVersions;
+import sandbox.oleksii.project.metadata.classes.components.PackageVersion;
 
 /**
  * Created by User on 05.01.2018.
@@ -20,5 +20,5 @@ public class TriggerXmlMetaPojo extends XmlPojoEntity {
     private String status;
 
     @Element(required = false)
-    private PackageVersions packageVersions;
+    private PackageVersion packageVersions;
 }

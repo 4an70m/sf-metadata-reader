@@ -4,7 +4,7 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import sandbox.oleksii.project.core.files.XmlPojoEntity;
-import sandbox.oleksii.project.metadata.translations.components.FlowDefinitions;
+import sandbox.oleksii.project.metadata.translations.components.FlowDefinition;
 import sandbox.oleksii.project.metadata.translations.components.LabelTranslation;
 
 import java.util.List;
@@ -29,7 +29,7 @@ public class TranslationPojo extends XmlPojoEntity {
     private List<LabelTranslation> customTabs;
 
     @ElementList(inline = true, entry = "flowDefinitions")
-    private List<FlowDefinitions> flowDefinitions;
+    private List<FlowDefinition> flowDefinitions;
 
     @ElementList(inline = true, entry = "quickActions")
     private List<LabelTranslation> quickActions;

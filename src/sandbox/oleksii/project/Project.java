@@ -1,5 +1,6 @@
 package sandbox.oleksii.project;
 
+import sandbox.oleksii.project.metadata.objectTranslations.ObjectTranslations;
 import sandbox.oleksii.project.metadata.portals.Portals;
 import sandbox.oleksii.project.metadata.appMenus.AppMenus;
 import sandbox.oleksii.project.metadata.applications.Applications;
@@ -92,6 +93,7 @@ public class Project {
     public ProfileSessionSettings profileSessionSettings;
     public Portals portals;
     public ProfilePasswordPolicies profilePasswordPolicies;
+    public ObjectTranslations objectTranslations;
 
     public Project(String rootPath) {
         this.root = new File(rootPath);
@@ -139,14 +141,15 @@ public class Project {
 //        this.quickActions = new QuickActions(rootPath);
 //        this.profileSessionSettings = new ProfileSessionSettings(rootPath);
 //        this.portals = new Portals(rootPath);
-        this.profilePasswordPolicies = new ProfilePasswordPolicies(rootPath);
+//        this.profilePasswordPolicies = new ProfilePasswordPolicies(rootPath);
+        this.objectTranslations = new ObjectTranslations(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
 //        Project p2 = new Project("");
         Project p = new Project("");
-        p.profilePasswordPolicies.getMetadata().stream().forEach(item -> {
+        p.objectTranslations.getMetadata().stream().forEach(item -> {
             try {
                 System.out.println(item.getEntity().toXml());
                 System.out.println();

@@ -23,5 +23,5 @@ public class ValueSet {
     private Boolean isRestricted;
 
     @ElementList(required = false, inline = true)
-    private List<ValueSettings> valueSettings;
+    private List<ValueSetting> valueSettings;
 }

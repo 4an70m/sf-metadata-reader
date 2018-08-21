@@ -6,7 +6,7 @@ import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import sandbox.oleksii.project.core.files.XmlPojoEntity;
 import sandbox.oleksii.project.metadata.duplicateRules.components.DuplicateRuleFilter;
-import sandbox.oleksii.project.metadata.duplicateRules.components.DuplicateRuleMatchRules;
+import sandbox.oleksii.project.metadata.duplicateRules.components.DuplicateRuleMatchRule;
 
 import java.util.List;
 
@@ -50,6 +50,6 @@ public class DuplicateRulePojo extends XmlPojoEntity {
     @Element
     private String actionOnUpdate;
 
-    @Element
-    private DuplicateRuleMatchRules duplicateRuleMatchRules;
+    @ElementList(inline = true, entry = "duplicateRuleMatchRules")
+    private List<DuplicateRuleMatchRule> duplicateRuleMatchRules;
 }

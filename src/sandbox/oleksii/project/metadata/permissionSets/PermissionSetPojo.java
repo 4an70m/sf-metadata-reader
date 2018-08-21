@@ -23,7 +23,7 @@ public class PermissionSetPojo extends XmlPojoEntity {
     private List<ClassAccess> classAccesses;
 
     @ElementList(inline = true, entry = "fieldPermissions")
-    private List<FieldPermissions> fieldPermissions;
+    private List<FieldPermission> fieldPermissions;
 
     @Element
     private Boolean hasActivationRequired;
@@ -44,11 +44,11 @@ public class PermissionSetPojo extends XmlPojoEntity {
     private List<RecordTypeVisibility> recordTypeVisibilities;
 
     @ElementList(inline = true, required = false, entry = "tabSettings")
-    private List<TabSettings> tabSettings;
+    private List<TabSetting> tabSettings;
 
     @ElementList(inline = true, required = false, entry = "pageAccesses")
     private List<PageAccess> pageAccesses;
 
     @ElementList(inline = true, required = false, entry = "objectPermissions")
-    private List<ObjectPermissions> objectPermissions;
+    private List<ObjectPermission> objectPermissions;
 }

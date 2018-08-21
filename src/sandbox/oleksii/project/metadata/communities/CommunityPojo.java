@@ -5,7 +5,7 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import sandbox.oleksii.project.core.files.XmlPojoEntity;
-import sandbox.oleksii.project.metadata.communities.components.ChatterAnswersReputationLevels;
+import sandbox.oleksii.project.metadata.communities.components.ChatterAnswersReputationLevel;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class CommunityPojo extends XmlPojoEntity {
     private Boolean enableChatterAnswers;
 
     @ElementList(entry = "chatterAnswersReputationLevels")
-    private List<ChatterAnswersReputationLevels> reputationLevels;
+    private List<ChatterAnswersReputationLevel> reputationLevels;
 
     @Element(required = false)
     private String description;
