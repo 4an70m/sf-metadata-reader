@@ -1,9 +1,9 @@
 package sandbox.oleksii.project;
 
 import sandbox.oleksii.project.metadata.emails.EmailFolder;
-import sandbox.oleksii.project.metadata.emails.EmailFolderXmlMeta;
 import sandbox.oleksii.project.metadata.emails.EmailMetadata;
 import sandbox.oleksii.project.metadata.emails.Emails;
+import sandbox.oleksii.project.metadata.flowDefinitions.FlowDefinitions;
 import sandbox.oleksii.project.metadata.objectTranslations.ObjectTranslations;
 import sandbox.oleksii.project.metadata.portals.Portals;
 import sandbox.oleksii.project.metadata.appMenus.AppMenus;
@@ -99,6 +99,7 @@ public class Project {
     public ProfilePasswordPolicies profilePasswordPolicies;
     public ObjectTranslations objectTranslations;
     public Emails emails;
+    public FlowDefinitions flowDefinition;
 
     public Project(String rootPath) {
         this.root = new File(rootPath);
@@ -148,16 +149,17 @@ public class Project {
 //        this.portals = new Portals(rootPath);
 //        this.profilePasswordPolicies = new ProfilePasswordPolicies(rootPath);
 //        this.objectTranslations = new ObjectTranslations(rootPath);
-        this.emails = new Emails(rootPath);
+//        this.emails = new Emails(rootPath);
+        this.flowDefinition = new FlowDefinitions(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
 //        Project p2 = new Project("");
         Project p = new Project("");
-        ((EmailFolder)p.emails.getFolders().get(0)).getMetadata().stream().forEach(item -> {
+        p.flowDefinition.getMetadata().stream().forEach(item -> {
             try {
-                System.out.println(((EmailMetadata) item).getRelatedMeta().getEntity().toXml());
+                System.out.println(item.getEntity().toXml());
                 System.out.println();
             } catch (Exception e) {
                 e.printStackTrace();

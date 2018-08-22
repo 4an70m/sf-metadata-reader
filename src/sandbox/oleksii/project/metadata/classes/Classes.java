@@ -30,5 +30,4 @@ public class Classes extends MetadataFolder {
             }
         }
     }
-
 }

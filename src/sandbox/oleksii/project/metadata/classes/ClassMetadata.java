@@ -17,5 +17,4 @@ public class ClassMetadata extends TextualMetadata {
     public ClassXmlMeta getRelatedMeta() {
         return relatedMeta;
     }
-
 }
