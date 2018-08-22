@@ -1,5 +1,9 @@
 package sandbox.oleksii.project;
 
+import sandbox.oleksii.project.metadata.emails.EmailFolder;
+import sandbox.oleksii.project.metadata.emails.EmailFolderXmlMeta;
+import sandbox.oleksii.project.metadata.emails.EmailMetadata;
+import sandbox.oleksii.project.metadata.emails.Emails;
 import sandbox.oleksii.project.metadata.objectTranslations.ObjectTranslations;
 import sandbox.oleksii.project.metadata.portals.Portals;
 import sandbox.oleksii.project.metadata.appMenus.AppMenus;
@@ -94,6 +98,7 @@ public class Project {
     public Portals portals;
     public ProfilePasswordPolicies profilePasswordPolicies;
     public ObjectTranslations objectTranslations;
+    public Emails emails;
 
     public Project(String rootPath) {
         this.root = new File(rootPath);
@@ -142,16 +147,17 @@ public class Project {
 //        this.profileSessionSettings = new ProfileSessionSettings(rootPath);
 //        this.portals = new Portals(rootPath);
 //        this.profilePasswordPolicies = new ProfilePasswordPolicies(rootPath);
-        this.objectTranslations = new ObjectTranslations(rootPath);
+//        this.objectTranslations = new ObjectTranslations(rootPath);
+        this.emails = new Emails(rootPath);
     }
 
 
     public static void main(String[] args) throws Exception {
 //        Project p2 = new Project("");
         Project p = new Project("");
-        p.objectTranslations.getMetadata().stream().forEach(item -> {
+        ((EmailFolder)p.emails.getFolders().get(0)).getMetadata().stream().forEach(item -> {
             try {
-                System.out.println(item.getEntity().toXml());
+                System.out.println(((EmailMetadata) item).getRelatedMeta().getEntity().toXml());
                 System.out.println();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -161,7 +167,6 @@ public class Project {
 
 
 //ToDo:
-//email
 //documents
 //escalationRules
 //flexipages
@@ -173,8 +178,9 @@ public class Project {
 //layouts
 //letterhead
 //newreps
-//objectTranslations
 //profiles
 //queues
 //reports
+
+//ToDo: define new supertype for entities with related meta
 }

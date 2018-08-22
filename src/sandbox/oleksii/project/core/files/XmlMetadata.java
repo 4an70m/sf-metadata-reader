@@ -9,7 +9,9 @@ public abstract class XmlMetadata extends Metadata {
 
     public XmlMetadata(String fileName) {
         super(fileName);
-        this.readXml();
+        if (this.exists()) {
+            this.readXml();
+        }
     }
 
     protected abstract void readXml();
